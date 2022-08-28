@@ -12,6 +12,37 @@ HOTSPOT can learn the gene content features of the input DNA sequences based on 
 The database of HOTSPOT will occupy a large storage space (45G) because of the magnitude of the full plasmid taxonomy tree. To 
 
 
+# Usage
+Test
+
+## Full command-line options
+preprocessing.py:
+```
+The usage of preprocessing.py:
+            [--contigs INPUT_FA]  Input fasta file (containing one or multiple plasmid contigs)
+            [--len MINIMUM_LEN]   Predict only for sequence >= len bp (default 1500)
+            [--threads NUM]       Number of threads to run preprocessing (default 8)
+            [--dbdir DR]          Path to store the database directory (default database/)
+            [--midfolder DIR]     Folder to store the intermediate files (default temporary_files/)
+
+```
+HOTSPOT.py:
+```
+The usage of HOTSPOT.py:
+            [--midfolder DIR]   Intermediate file folder output by preprocessing.py (default temporary_files/)
+            [--mdldir DR]       Path to store the HOTSPOT pre-trained model directory (default models/)
+            [--dbdir DR]        Path to store the database directory (default database/)
+            [--out OUT]         File path to store the prediction results (default "Result/prediction.tsv")
+            [--threads NUM]     Number of threads to run if 'cpu' is detected ('cuda' not found) (default 8)
+            [--mode MOD]        Early stop modes. If 2 or 3 is chosen, the prediction process will slow down.
+                                1: sensitive mode (lower precision, higher recall)  (default)
+                                2: specific mode (moderate precision, moderate recall)
+                                3: accurate mode (higher precision, lower recall)
+                                (default 1)
+            [--mcnum MC]        The number of MC dropout predictions (The minimum value is 10). If you enable the early stop mode (2 or 3), the running time will increase in proportion to this number (default 100)
+```
+
+
 # Format of the output file
 1. The format of the input file should be a fasta file that contains one or more plasmid contigs (complete plasmids are also ok). If an input contig is too short (e.g., <1000 bp), it's possible that **Prodigal** can predict no protein. In this case, HOTSPOT will not output any result for this contig.
 2. The output file format is a csv file containing the predicted host taxonomic lineage information of input plasmid contigs. Each row represents the prediction result for one input contig. **Contig** is the contig accession number from the input.
