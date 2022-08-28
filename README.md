@@ -32,7 +32,7 @@ python HOTSPOT.py
 ```
 
 ## Early stop function using Monte Carlo (MC) dropout
-HOTSPOT provides two special modes, `specific mode` and `accurate mode`, aiming to achieve higher precision and handle broad-host-range (BHR) plasmids. To enable this two modes, you can use options `--mode 2` or `--mode 3`. In addition, the prediction number for MC dropout can also be chosen by the option `--mcnum`.
+HOTSPOT provides two special modes, `specific mode` and `accurate mode`, aiming to achieve higher precision and handle broad-host-range (BHR) plasmids. To enable these two modes, you can use options `--mode 2` or `--mode 3`. In addition, the prediction number for MC dropout can also be chosen by the option `--mcnum`.
 
 
 ## Full command-line options
