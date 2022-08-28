@@ -15,6 +15,7 @@ The database of HOTSPOT will occupy a large storage space (45G) because of the m
 # Format of the output file
 1. The format of the input file should be a fasta file that contains one or more plasmid contigs (complete plasmids are also ok). If an input contig is too short (e.g., <1000 bp), it's possible that **Prodigal** can predict no protein. In this case, HOTSPOT will not output any result for this contig.
 2. The output file format is a csv file containing the prediction taxonomic lineage information of input plasmid contigs. Each row represents the prediction result for one input contig. **Contig** is the contig accession number from the input.
+
 | Contig | phylum | class | order | family | genus | species |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | CP090713.1  | Proteobacteria  | Betaproteobacteria  | Burkholderiales  | Burkholderiaceae  | Burkholderia  | Burkholderia multivorans  |
