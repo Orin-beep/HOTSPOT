@@ -9,11 +9,21 @@ HOTSPOT can learn the gene content features of the input DNA sequences based on 
 
 
 # Prepare the database
+## Download the database
+To prepare the database, you can simply use this bash scripts: 
+```
+sh prepare_db.sh
+```
+To be sure that the `database/` folder is placed in HOTSPOT's main directory.
+
+
+
+## Download the pretrained models
 The database of HOTSPOT will occupy a large storage space (45G) because of the magnitude of the full plasmid taxonomy tree. To 
 
 
 # Usage
-Before the prediction, you have to use `preprocessing.py` for length filter and sentence matrix generation (as the input into the Transformer model). The temporary files will be stored in the folder `temporary_files` by default. Then, `HOTSPOT.py` will help you with the host prediction. The results are stored in the csv file `Result/prediction.tsv` by default.
+Before the prediction, you have to use `preprocessing.py` for length filter and sentence matrix generation (as the input into the Transformer model). The temporary files will be stored in the folder `temporary_files/` by default. Then, `HOTSPOT.py` will help you with the host prediction. The results are stored in the csv file `Result/prediction.tsv` by default.
 
 ## Simple example
 ```
