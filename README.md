@@ -13,7 +13,10 @@ The database of HOTSPOT will occupy a large storage space (45G) because of the m
 
 
 # Usage
-Before the prediction, you have to use `preprocessing.py` for length filter and sentence matrix generation (as the input into the Transformer model). Then, `HOTSPOT.py` will help you with the host prediction.
+Before the prediction, you have to use `preprocessing.py` for length filter and sentence matrix generation (as the input into the Transformer model). The temporary files will be stored in the folder `temporary_files` by default. Then, `HOTSPOT.py` will help you with the host prediction. The results are stored in the csv file `Result/prediction.tsv` by default.
+
+## Example
+
 
 ## Full command-line options
 preprocessing.py:
