@@ -31,6 +31,10 @@ python preprocessing.py --contigs Example_fasta/multiple_plasmids.fasta
 python HOTSPOT.py
 ```
 
+## Early stop function using Monte Carlo (MC) dropout
+HOTSPOT provides two special modes, `specific mode` and `accurate mode`, aiming to achieve higher precision and handle broad-host-range (BHR) plasmids. To enable this two modes, you can use options `--mode 2` or `--mode 3`. In addition, the prediction number for MC dropout can also be chosen by the option `--mcnum`.
+
+
 ## Full command-line options
 preprocessing.py:
 ```
@@ -50,7 +54,7 @@ The usage of HOTSPOT.py:
             [--dbdir DR]        Path to store the database directory (default database/)
             [--out OUT]         File path to store the prediction results (default "Result/prediction.tsv")
             [--threads NUM]     Number of threads to run if 'cpu' is detected ('cuda' not found) (default 8)
-            [--mode MOD]        Early stop modes. If 2 or 3 is chosen, the prediction process will slow down.
+            [--mode MOD]        Three modes with different Monte Carlo (MC) dropout early stop parameters. If 2 or 3 is chosen, the prediction process will slow down.
                                 1: sensitive mode (lower precision, higher recall)  (default)
                                 2: specific mode (moderate precision, moderate recall)
                                 3: accurate mode (higher precision, lower recall)
