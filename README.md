@@ -24,7 +24,10 @@ The database of HOTSPOT will occupy a large storage space (45G) because of the m
 | NZ_CP083659.1  | Proteobacteria  | Gammaproteobacteria  | Moraxellales  | Moraxellaceae  | Acinetobacter  | Acinetobacter variabilis  |
 | Z22927.1  | Actinobacteria  | Actinomycetia  | Corynebacteriales  | Corynebacteriaceae  | Corynebacterium  | Corynebacterium glutamicum  |
 
-
+| 左对齐 | 右对齐 | 居中对齐 |
+| :-----| ----: | :----: |
+| 单元格 | 单元格 | 单元格 |
+| 单元格 | 单元格 | 单元格 |
 
 # Contact
 If you have any questions, please email us:
