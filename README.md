@@ -11,3 +11,12 @@ HOTSPOT can learn the gene content features of the input DNA sequences based on 
 # Prepare the database
 The database of HOTSPOT will occupy a large storage space (45G) because of the magnitude of the full plasmid taxonomy tree. To 
 
+
+
+
+
+# Contact
+If you have any questions, please email us:
+  yongxinji2-c@my.cityu.edu.hk (Ji Yongxin)
+  jyshang2-c@my.cityu.edu.hk (Shang Jiayu)
+  
