@@ -18,8 +18,8 @@ The database of HOTSPOT will occupy a large storage space (45G) because of the m
 # Contact
 If you have any questions, please email us:
   
-  yongxinji2-c@my.cityu.edu.hk (Ji Yongxin)
+>yongxinji2-c@my.cityu.edu.hk (Ji Yongxin)
   
-  jyshang2-c@my.cityu.edu.hk (Shang Jiayu)
+>jyshang2-c@my.cityu.edu.hk (Shang Jiayu)
   
-  xubotang2-c@my.cityu.edu.hk (Tang Xubo)
+>xubotang2-c@my.cityu.edu.hk (Tang Xubo)
