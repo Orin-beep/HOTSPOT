@@ -12,6 +12,10 @@ HOTSPOT can learn the gene content features of the input DNA sequences based on 
 The database of HOTSPOT will occupy a large storage space (45G) because of the magnitude of the full plasmid taxonomy tree. To 
 
 
+# Format of the output file
+1. The format of the input file should be a fasta file that contains one or more plasmid contigs (complete plasmids are also ok). If an input contig is too short (e.g., <1000 bp), it's possible that **Prodigal** can predict no protein. In this case, HOTSPOT will not output any result for this contig.
+2.  Because 
+
 
 
 
