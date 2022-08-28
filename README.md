@@ -10,15 +10,15 @@ HOTSPOT can learn the gene content features of the input DNA sequences based on 
 
 # Prepare the database
 ## Download the database
-To prepare the database, you can simply use this bash scripts: 
+To prepare the database, you can simply use this bash script: 
 ```
 sh prepare_db.sh
 ```
-To be sure that the `database/` folder is placed in HOTSPOT's main directory.
+To be sure that the downloaded `database/` folder is placed in HOTSPOT's main directory. Otherwise, you have to use option `--dbdir` to specify the database path when running `preprocessing.py` and `HOTSPOT.py`.
 
 
 
-## Download the pretrained models
+## Download the pre-trained models
 The database of HOTSPOT will occupy a large storage space (45G) because of the magnitude of the full plasmid taxonomy tree. To 
 
 
