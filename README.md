@@ -84,8 +84,8 @@ The usage of HOTSPOT.py:
 # Contact
 If you have any questions, please email us:
   
->yongxinji2-c@my.cityu.edu.hk (Ji Yongxin)
+>yongxinji2-c@my.cityu.edu.hk (Yongxin JI)
   
->jyshang2-c@my.cityu.edu.hk (Shang Jiayu)
+>jyshang2-c@my.cityu.edu.hk (Jiayu SHANG)
   
->xubotang2-c@my.cityu.edu.hk (Tang Xubo)
+>xubotang2-c@my.cityu.edu.hk (Xubo TANG)
