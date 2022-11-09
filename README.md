@@ -1,7 +1,7 @@
-# HOTSPOT
-HOTSPOT is a hierarchical host prediction tool for plasmid contigs using Transformer.
+# HOTSPOT: Hierarchical hOst predicTion for aSsembled Plasmid cOntigs with Transformer
 
-HOTSPOT can learn the gene content features of the input DNA sequences based on deep learning classifiers. Using these features, HOTSPOT will predict the taxonomic lineage information of the input. There are 115 classifier models in all, each corresponding to a taxonomy tree node. To use HOTSPOT, you only need to input contigs of plasmid origin into the program.
+HOTSPOT's backbone is a phylogenetic tree of the plasmid hosts (bacteria) from phylum to species. By incorporating the state-of-the-art language model, Transformer, in each node’s taxon classifier, the top-down tree search can accurately predict the host taxonomy for the input plasmid contigs. There are totally 115 taxon classifiers, each corresponding to a node from phylum to genus. To use HOTSPOT, you only need to input complete plasmids or plasmid contigs assembled from metagenomic data into the program.
+
 
 # Required Dependencies
 
