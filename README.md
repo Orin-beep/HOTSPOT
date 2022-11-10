@@ -54,7 +54,7 @@ The pre-trained models are a little big because the phylogenetic includes 10, 19
 
 
 # Usage
-Before running the host prediction, you have to use __`preprocessing.py` for length filter and feature encoding__ (including the hypothetical proteins, identified MOB/MPF proteins and Inc group of the inputs, details see the paper "HOTSPOT: Hierarchical hOst predicTion for aSsembled Plasmid cOntigs with Transformer"). The temporary files will be stored in the folder `temporary_files/` by default. Then, `HOTSPOT.py` performs the host prediction with the phylogenetic tree search and pre-trained models. The results are stored in the TSV file `Result/prediction.tsv` by default.
+Before running the host prediction, you have to use __`preprocessing.py` for length filter and feature encoding__ (including the hypothetical proteins, identified MOB/MPF proteins and Inc group of the inputs. Details are available in the paper "HOTSPOT: Hierarchical hOst predicTion for aSsembled Plasmid cOntigs with Transformer"). The temporary files will be stored in the folder `temporary_files/` by default. Then, `HOTSPOT.py` performs the host prediction with the phylogenetic tree search and pre-trained models. The results are stored in the TSV file `Result/prediction.tsv` by default.
 
 
 ## Simple example
