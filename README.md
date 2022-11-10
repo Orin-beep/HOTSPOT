@@ -89,17 +89,17 @@ The usage of preprocessing.py:
 HOTSPOT.py:
 ```
 The usage of HOTSPOT.py:
-            [--midfolder DIR]   Intermediate file folder output by preprocessing.py (default temporary_files/)
-            [--mdldir DR]       Path to store the HOTSPOT pre-trained model directory (default models/)
-            [--dbdir DR]        Path to store the database directory (default database/)
-            [--out OUT]         File path to store the prediction results (default "Result/prediction.tsv")
-            [--threads NUM]     Number of threads to run if 'cpu' is detected ('cuda' not found) (default 8)
-            [--mode MOD]        Three modes with different Monte Carlo (MC) dropout early stop parameters. If 2 or 3 is chosen, the prediction process will slow down.
-                                1: sensitive mode (lower precision, higher recall)  (default)
-                                2: specific mode (moderate precision, moderate recall)
-                                3: accurate mode (higher precision, lower recall)
+            [--midfolder DIR]   Folder to store the intermediate files from preprocessing (default temporary_files/)
+            [--mdldir DR]       Pre-trained models' directory (default models/)
+            [--dbdir DR]        Database directory (default database/)
+            [--out OUT]         Path of the output file (default Result/prediction.tsv)
+            [--threads NUM]     Number of threads to use if 'cpu' is detected ('cuda' not found) (default 8)
+            [--mode MOD]        Selected early stop mode.
+                                1: sensitive mode (no early stop used)  (default)
+                                2: specific mode (enabling the early stop)
+                                3: accurate mode (enabling the early stop with more stringent uncertainty cutoff, leading to more accurate prediction but returning taxa in higher levels for some inputs)
                                 (default 1)
-            [--mcnum MC]        The number of MC dropout predictions (The minimum value is 10). If you enable the early stop mode (2 or 3), the running time will increase in proportion to this number (default 100)
+            [--mcnum MC]        The number of the dropout-enabled forward passes to estimate the uncertainty (default: 100, minimum: 10)
 ```
 
 
