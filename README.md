@@ -50,17 +50,19 @@ sh prepare_mdl.sh
 
 Similar to the database preparation, if the model path is not under HOTSPOT's main directory, you need to use option `--mdldir` to specify the model path when running `HOTSPOT.py`.
 
-
 The pre-trained models are a little big because the phylogenetic includes 10, 19, 46, 94, 180, and 272 nodes for the six taxonomic ranks from phylum to species, respectively. We will try to optimize the model size in the next version of HOTSPOT.
 
+
 # Usage
-Before the prediction, you have to use `preprocessing.py` for length filter and sentence matrix generation (as the input into the Transformer model). The temporary files will be stored in the folder `temporary_files/` by default. Then, `HOTSPOT.py` will help you with the host prediction. The results are stored in the csv file `Result/prediction.tsv` by default.
+Before running the host prediction, you have to use __`preprocessing.py` for the length filter and feature encoding__ (of the protein clusters, MOB/MPF proteins, and Inc groups, details see the paper `HOTSPOT: Hierarchical hOst predicTion for aSsembled Plasmid cOntigs with Transformer`). The temporary files will be stored in the folder `temporary_files/` by default. Then, `HOTSPOT.py` performs the host prediction with the phylogenetic tree search and our pre-trained models. The results are stored in the csv file `Result/prediction.tsv` by default.
+
 
 ## Simple example
 ```
 python preprocessing.py --contigs Example_fasta/multiple_plasmids.fasta
 python HOTSPOT.py
 ```
+
 
 ## Early stop function using Monte Carlo (MC) dropout
 HOTSPOT provides two special modes, `specific mode` and `accurate mode`, aiming to achieve higher precision and handle broad-host-range (BHR) plasmids. To enable these two modes, you can use options `--mode 2` or `--mode 3`. In addition, the prediction number for MC dropout can also be chosen by the option `--mcnum`.
