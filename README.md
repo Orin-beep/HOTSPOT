@@ -78,13 +78,14 @@ python HOTSPOT.py --mode 3 --mcnum 80
 preprocessing.py:
 ```
 The usage of preprocessing.py:
-            [--contigs INPUT_FA]  Input fasta file (containing one or multiple plasmid contigs)
-            [--len MINIMUM_LEN]   Predict only for sequence >= len bp (default 1500)
-            [--threads NUM]       Number of threads to run preprocessing (default 8)
-            [--dbdir DR]          Path to store the database directory (default database/)
-            [--midfolder DIR]     Folder to store the intermediate files (default temporary_files/)
-
+            [-h, --help]          Show the help message and exit
+            [--contigs INPUT_FA]  FASTA file of the inputs (one or more contigs, default test_contigs.fa)
+            [--len MINIMUM_LEN]   Minimum length (bp) of contigs for length filter (default 1500)
+            [--threads NUM]       Number of threads to use (default 8)
+            [--dbdir DR]          Database directory (optional, default database/)
+            [--midfolder DIR]     Folder to store the intermediate files from preprocessing (optional, default temporary_files/)
 ```
+
 HOTSPOT.py:
 ```
 The usage of HOTSPOT.py:
