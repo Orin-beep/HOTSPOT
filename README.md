@@ -48,6 +48,9 @@ Or if you have sufficient disk storage, you can download the complete models (45
 sh prepare_mdl.sh
 ```
 
+Similar to the database preparation, if the model path is not under HOTSPOT's main directory, you need to use option `--mdldir` to specify the model path when running `HOTSPOT.py`.
+
+
 The pre-trained models are a little big because the phylogenetic includes 10, 19, 46, 94, 180, and 272 nodes for the six taxonomic ranks from phylum to species, respectively. We will try to optimize the model size in the next version of HOTSPOT.
 
 # Usage
