@@ -1,6 +1,6 @@
 # HOTSPOT: plasmid host prediction
 
-HOTSPOT's backbone is a phylogenetic tree of the plasmid hosts (bacteria) from phylum to species. By incorporating the state-of-the-art language model, Transformer, in each node’s taxon classifier, the top-down tree search can accurately predict the host taxonomy for the input plasmid contigs. There are totally 115 taxon classifiers, each corresponding to a node with more than one child node from phylum to genus. __To use HOTSPOT, you only need to input complete plasmids or plasmid contigs assembled from metagenomic data into the program.__
+HOTSPOT's backbone is a phylogenetic tree of the plasmid hosts (bacteria) from phylum to species. By incorporating the state-of-the-art language model, Transformer, in each node’s taxon classifier, the top-down tree search can accurately predict the host taxonomy for the input plasmid contigs. There are totally 115 taxon classifiers, each corresponding to a node with more than one child node. __To use HOTSPOT, you only need to input complete plasmids or plasmid contigs assembled from metagenomic data into the program.__
 
 
 # Required Dependencies
@@ -38,15 +38,17 @@ To be sure that the downloaded `database/` folder is placed in the HOTSPOT's mai
 
 
 ## Prepare the pre-trained models
+If you don't need the host identification at the species level, you may only download the pre-trained models from phylum to genus (26G):
+```
+sh prepare_light_mdl.sh
+```
 
+Or if you have sufficient disk storage, you can download the complete models (45G):
+```
+sh prepare_mdl.sh
+```
 
-
-
-
-
-## Download the pre-trained models
-The database of HOTSPOT will occupy a large storage space (45G) because of the magnitude of the full plasmid taxonomy tree. To 
-
+The pre-trained models are a little big because the phylogenetic includes 10, 19, 46, 94, 180, and 272 nodes for the six taxonomic ranks from phylum to species, respectively. We will try to optimize the model size in the next version of HOTSPOT.
 
 # Usage
 Before the prediction, you have to use `preprocessing.py` for length filter and sentence matrix generation (as the input into the Transformer model). The temporary files will be stored in the folder `temporary_files/` by default. Then, `HOTSPOT.py` will help you with the host prediction. The results are stored in the csv file `Result/prediction.tsv` by default.
