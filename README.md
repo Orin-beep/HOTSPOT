@@ -17,7 +17,7 @@ HOTSPOT's backbone is a phylogenetic tree of the plasmid hosts (bacteria) from p
 If you want to use the gpu to accelerate the program:
 * cuda
 * Pytorch-gpu
-* For cpu version pytorch: conda install pytorch torchvision torchaudio cpuonly -c pytorch
+* For cpu version pytorch: ```conda install pytorch torchvision torchaudio cpuonly -c pytorch```
 
 
 
