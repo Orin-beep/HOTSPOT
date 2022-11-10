@@ -103,8 +103,8 @@ The usage of HOTSPOT.py:
 
 
 # Format of the output file
-1. The format of the input file should be a fasta file that contains one or more plasmid contigs (complete plasmids are also ok). If an input contig is too short (e.g., <1.5kbp), it's possible that **Prodigal** can predict no protein. In this case, HOTSPOT will not output any result for this contig.
-2. The output file format is a csv file containing the predicted host taxonomic lineage information of input plasmid contigs. Each row represents the prediction result for one input contig. **Contig** is the contig accession number from the input.
+1. The format of the input file should be a fasta file that contains one or more plasmid contigs or complete plasmids. If an input contig is too short for protein translation by Prodigal (e.g., <1.5kbp), HOTSPOT may not output any result for this contig.
+2. The output is a TSV file containing the predicted host information from phylum to species. Each row corresponds to one input contig.
 
 | Contig | phylum | class | order | family | genus | species |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
