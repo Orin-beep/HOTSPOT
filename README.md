@@ -14,6 +14,7 @@ HOTSPOT's backbone is a phylogenetic tree of the plasmid hosts (bacteria) from p
 * [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
 * [HMMER](http://hmmer.org/)
 * [treelib](https://pypi.org/project/treelib/)
+* [gdown](https://github.com/wkentaro/gdown) (to download the database and pre-trained models from Google Drive)
 
 If you want to use the gpu to accelerate the program:
 * cuda
