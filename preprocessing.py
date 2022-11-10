@@ -12,13 +12,13 @@ import time
 #############################################################
 ########################  Parameters  #######################
 #############################################################
-parser = argparse.ArgumentParser(description="""HOTSPOT is a learning-based tool for predicting host range of assembled plasmid contigs.
-                                                HOTSPOT is based on the state-of-the-art NLP model Transformer and relies on protein-based vocabulary (Markov clustering and MOB/MPF types of plasmid proteins) and to convert DNA sequences into sentences.""")
-parser.add_argument('--contigs', help='FASTA file of contigs',  default = 'test_contigs.fa')
-parser.add_argument('--len', help='minimum length of contigs', type=int, default=1500)
-parser.add_argument('--threads', help='number of threads to use', type=int, default=8)
-parser.add_argument('--dbdir', help='database directory (optional)',  default = 'database/')
-parser.add_argument('--midfolder', help='folder to store the intermediate files', type=str, default='temporary_files/')
+parser = argparse.ArgumentParser(description="""Introduction: HOTSPOT is a learning-based tool to predict host information from phylum to species for complete plasmids or plasmid contigs assembled from metagenomic data. Its backbone is a phylogenetic tree of the plasmid hosts (bacteria) from phylum to species. By incorporating the state-of-the-art language model, Transformer, in each node’s taxon classifier, the top-down tree search can accurately predict the host taxonomy for the input plasmid contigs. There are totally 115 taxon classifiers, each corresponding to a node with more than one child node. To use HOTSPOT, you only need to input complete plasmids or plasmid contigs assembled from metagenomic data into the program. 
+                                                """)
+parser.add_argument('--contigs', help='FASTA file of the inputs (one or more contigs)',  default = 'test_contigs.fa')
+parser.add_argument('--len', help='minimum length of contigs for length filter (default 1500)', type=int, default=1500)
+parser.add_argument('--threads', help='number of threads to use (default 8)', type=int, default=8)
+parser.add_argument('--dbdir', help='database directory (optional, default database/)',  default = 'database/')
+parser.add_argument('--midfolder', help='folder to store the intermediate files of preprocessing (optional, default temporary_files/)', type=str, default='temporary_files/')
 inputs = parser.parse_args()
 
 
@@ -32,7 +32,7 @@ def help_info():
             [--len MINIMUM_LEN]   Predict only for sequence >= len bp (default 1500)
             [--threads NUM]       Number of threads to run preprocessing (default 8)
             [--dbdir DR]          Path to store the database directory (default database/)
-            [--midfolder DIR]     Folder to store the intermediate files (default temporary_files/)
+            [--midfolder DIR]     Folder to store the intermediate files of preprocessing (default temporary_files/)
     """)
 
 
@@ -43,7 +43,7 @@ if not os.path.isdir(out_fn):
 
 db_dir = inputs.dbdir
 if not os.path.exists(db_dir):
-    print(f'Database directory "{db_dir}" missing or unreadable. Please use option "--dbdir" to specify the database path or place the database files under the default path "database/".')
+    print(f'Database directory "{db_dir}" missing or incomplete. Please use option "--dbdir" to specify the database path or place the database files under the default path "database/".')
     help_info()
     exit(1)
 
@@ -77,7 +77,7 @@ threads = inputs.threads
 preprocessing(f'{out_fn}/filtered_contigs.fa', db_dir, out_fn, threads)
 sentence = assemble_sentences(out_fn, db_dir)
 if(len(sentence)==0):
-    print(f'The converted sentences are empty! (No aligned protein to the blastp database)')
+    print(f'The converted sentences are empty! (No available protein)')
     exit(1)
 
 
