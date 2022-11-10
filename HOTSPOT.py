@@ -15,15 +15,15 @@ from library.model import hotspot_model
 
 
 start=time.time()
-parser = argparse.ArgumentParser(description="""HOTSPOT is a learning-based tool for predicting host range of assembled plasmid contigs.
-                                                HOTSPOT is based on the state-of-the-art NLP model Transformer and relies on protein-based vocabulary (Markov clustering and MOB/MPF types of plasmid proteins) and to convert DNA sequences into sentences.""")
-parser.add_argument('--midfolder', help='output file from preprocessing', type=str, default='temporary_files/')
-parser.add_argument('--threads', help='number of threads to use', type=int, default=8)
+parser = argparse.ArgumentParser(description="""Introduction: HOTSPOT is a learning-based tool to predict host information from phylum to species for complete plasmids or plasmid contigs assembled from metagenomic data. Its backbone is a phylogenetic tree of the plasmid hosts (bacteria) from phylum to species. By incorporating the state-of-the-art language model, Transformer, in each node’s taxon classifier, the top-down tree search can accurately predict the host taxonomy for the input plasmid contigs. There are totally 115 taxon classifiers, each corresponding to a node with more than one child node. To use HOTSPOT, you only need to input complete plasmids or plasmid contigs assembled from metagenomic data into the program. 
+                                                        """)
+parser.add_argument('--midfolder', help='folder to store the intermediate files of preprocessing (optional, default temporary_files/)', type=str, default='temporary_files/')
+parser.add_argument('--threads', help='number of threads to use (default 8)', type=int, default=8)
 parser.add_argument('--mdldir', help='pre-trained model directory (optional)',  default = 'models/')
-parser.add_argument('--dbdir', help='database directory (optional)',  default = 'database/')
-parser.add_argument('--out', help='name of the output file',  type=str, default = 'Result/prediction.tsv')
-parser.add_argument('--mode', help='three modes with different MC (Monte Carlo) dropout early stop parameters. 1: sensitive mode (low precision, high recall), 2: specific mode (medium precision, medium recall), 3: accurate mode (low recall, high precision)',  type=int, default = 1)
-parser.add_argument('--mcnum', help='The number of MC dropout predictions (The minimum value is 10). If you enable the early stop mode (2 or 3), the running time is directly proportional to this number',  type=int, default = 100)
+parser.add_argument('--dbdir', help='database directory (optional, default database/)',  default = 'database/')
+parser.add_argument('--out', help='path of the output file (optional, default Result/prediction.tsv)',  type=str, default = 'Result/prediction.tsv')
+parser.add_argument('--mode', help='three early stop modes with different uncertainty cutoff estimated with Monte Carlo dropout (MC-dropout). 1: sensitive mode (no early stop used), 2: specific mode (enabling the early stop), 3: accurate mode (enabling the early stop with more stringent uncertainty cutoff, leading to more accurate prediction but returning taxa in higher levels for some inputs). (default: sensitive mode)',  type=int, default = 1)
+parser.add_argument('--mcnum', help='the number of the dropout-enabled forward passes to estimate the uncertainty (default: 100, minimum: 10).',  type=int, default = 100)
 inputs = parser.parse_args()
 
 
@@ -34,16 +34,16 @@ def help_info():
     print('')
     print("""The usage of HOTSPOT.py:
             [--midfolder DIR]   Intermediate file folder output by preprocessing.py (default temporary_files/)
-            [--mdldir DR]       Path to store the HOTSPOT pre-trained model directory (default models/)
-            [--dbdir DR]        Path to store the database directory (default database/)
-            [--out OUT]         File path to store the prediction results (default "Result/prediction.tsv")
+            [--mdldir DR]       Path to store the pre-trained models (default models/)
+            [--dbdir DR]        Path to store the database (default database/)
+            [--out OUT]         Path to store the prediction results (default "Result/prediction.tsv")
             [--threads NUM]     Number of threads to run if 'cpu' is detected ('cuda' not found) (default 8)
-            [--mode MOD]        Early stop modes. If 2 or 3 is chosen, the prediction process will slow down.
-                                1: sensitive mode (lower precision, higher recall)  (default)
-                                2: specific mode (moderate precision, moderate recall)
-                                3: accurate mode (higher precision, lower recall)
+            [--mode MOD]        Early stop modes. If 2 or 3 is chosen, the prediction process will slightly slow down.
+                                1: sensitive mode (no early stop used)  (default)
+                                2: specific mode (enabling the early stop)
+                                3: accurate mode (enabling the early stop with more stringent uncertainty cutoff, leading to more accurate prediction but returning taxa in higher levels for some inputs)
                                 (default 1)
-            [--mcnum MC]        The number of MC dropout predictions (The minimum value is 10). If you enable the early stop mode (2 or 3), the running time will increase in proportion to this number (default 100)
+            [--mcnum MC]        The number of the dropout-enabled forward passes to estimate the uncertainty (default: 100, minimum: 10)
     """)
 
 
@@ -261,7 +261,7 @@ while(pending!=[]):
 tsv_w = csv.writer(open(inputs.out, 'w'), delimiter='\t')
 tsv_w.writerow(['Contig', 'phylum', 'class', 'order', 'family', 'genus', 'species'])
 for i in res:
-    tmp = ['']*7
+    tmp = ['-']*7
     tmp[0] = i
     for j in range(len(res[i])):
         tmp[j+1] = res[i][j]
