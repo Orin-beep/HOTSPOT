@@ -116,3 +116,15 @@ dependencies:
   - xz=5.2.6=h166bdaf_0
   - zlib=1.2.13=h166bdaf_4
   - zstd=1.5.2=h6239696_4
+  - pip:
+    - beautifulsoup4==4.11.1
+    - certifi==2022.9.24
+    - charset-normalizer==2.1.1
+    - filelock==3.8.0
+    - gdown==4.5.3
+    - idna==3.4
+    - pysocks==1.7.1
+    - requests==2.28.1
+    - soupsieve==2.3.2.post1
+    - tqdm==4.64.1
+    - urllib3==1.26.12
