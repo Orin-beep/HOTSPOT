@@ -95,7 +95,7 @@ The usage of HOTSPOT.py:
             [--out OUT]         Path of the output file (default Result/prediction.tsv)
             [--threads NUM]     Number of threads to use if 'cpu' is detected ('cuda' not found) (default 8)
             [--mode MOD]        Selected early stop mode.
-                                1: sensitive mode (no early stop used)  (default)
+                                1: sensitive mode (no early stop used, default)
                                 2: specific mode (enabling the early stop)
                                 3: accurate mode (enabling the early stop with more stringent uncertainty cutoff, leading to more accurate prediction but returning taxa in higher levels for some inputs)
                                 (default 1)
