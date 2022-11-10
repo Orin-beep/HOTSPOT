@@ -93,7 +93,7 @@ The usage of HOTSPOT.py:
             [--mdldir DR]       Pre-trained models' directory (default models/)
             [--dbdir DR]        Database directory (default database/)
             [--out OUT]         Path of the output file (default Result/prediction.tsv)
-            [--threads NUM]     Number of threads to use if 'cpu' is detected ('cuda' not found) (default 8)
+            [--threads NUM]     Number of threads to use if 'cpu' is detected ('cuda' not found, default 8)
             [--mode MOD]        Selected early stop mode.
                                 1: sensitive mode (no early stop used, default)
                                 2: specific mode (enabling the early stop)
