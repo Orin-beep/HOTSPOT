@@ -30,19 +30,17 @@ conda env create -f environment.yaml -n hotspot
 
 
 ## Prepare the database
-
+To prepare the database, you can simply use this bash script: 
+```
+sh prepare_db.sh
+```
+To be sure that the downloaded `database/` folder is placed in the HOTSPOT's main directory. Otherwise, you have to use option `--dbdir` to specify the database path when running `preprocessing.py` and `HOTSPOT.py`.
 
 
 ## Prepare the pre-trained models
 
 
-# Prepare the database
-## Download the database
-To prepare the database, you can simply use this bash script: 
-```
-sh prepare_db.sh
-```
-To be sure that the downloaded `database/` folder is placed in HOTSPOT's main directory. Otherwise, you have to use option `--dbdir` to specify the database path when running `preprocessing.py` and `HOTSPOT.py`.
+
 
 
 
