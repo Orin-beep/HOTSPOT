@@ -4,10 +4,10 @@ HOTSPOT's backbone is a phylogenetic tree of the plasmid hosts (bacteria) from p
 
 
 # Required Dependencies
-
-    - 无序列表一
-    + 无序列表二
-    * 无序列表三
+* 总目录
+  * 一级目录
+    * 二级目录
+      * 三级目录
 
 
 # Prepare the database
