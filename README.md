@@ -38,12 +38,12 @@ To be sure that the downloaded `database/` folder is placed in the HOTSPOT's mai
 
 
 ## Prepare the pre-trained models
-If you don't need the host identification at the species level, you may only download the pre-trained models from phylum to genus (26G):
+If you don't need the host identification at the species level, you may only download the pre-trained models from phylum to genus (25.6G):
 ```
 sh prepare_light_mdl.sh
 ```
 
-Or if you have sufficient disk storage, you can download the complete models (45G):
+Or if you have sufficient disk storage, you can download the complete models (44G):
 ```
 sh prepare_mdl.sh
 ```
