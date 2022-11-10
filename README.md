@@ -82,8 +82,8 @@ The usage of preprocessing.py:
             [--contigs INPUT_FA]  FASTA file of the inputs (one or more contigs, default test_contigs.fa)
             [--len MINIMUM_LEN]   Minimum length (bp) of contigs for length filter (default 1500)
             [--threads NUM]       Number of threads to use (default 8)
-            [--dbdir DR]          Database directory (optional, default database/)
-            [--midfolder DIR]     Folder to store the intermediate files from preprocessing (optional, default temporary_files/)
+            [--dbdir DR]          Database directory (default database/)
+            [--midfolder DIR]     Folder to store the intermediate files from preprocessing (default temporary_files/)
 ```
 
 HOTSPOT.py:
