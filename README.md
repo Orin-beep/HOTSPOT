@@ -22,6 +22,17 @@ If you want to use the gpu to accelerate the program:
 * For gpu version pytorch: Search [pytorch](https://pytorch.org/) to find the correct cuda version according to your computer
 
 
+## Prepare the environment
+
+
+
+## Prepare the database
+
+
+
+## Prepare the pre-trained models
+
+
 # Prepare the database
 ## Download the database
 To prepare the database, you can simply use this bash script: 
