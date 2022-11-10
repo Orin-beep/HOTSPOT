@@ -12,13 +12,13 @@ import time
 #############################################################
 ########################  Parameters  #######################
 #############################################################
-parser = argparse.ArgumentParser(description="""Introduction: HOTSPOT is a learning-based tool to predict host information from phylum to species for complete plasmids or plasmid contigs assembled from metagenomic data. Its backbone is a phylogenetic tree of the plasmid hosts (bacteria) from phylum to species. By incorporating the state-of-the-art language model, Transformer, in each node’s taxon classifier, the top-down tree search can accurately predict the host taxonomy for the input plasmid contigs. There are totally 115 taxon classifiers, each corresponding to a node with more than one child node. To use HOTSPOT, you only need to input complete plasmids or plasmid contigs assembled from metagenomic data into the program. 
+parser = argparse.ArgumentParser(description="""HOTSPOT is a learning-based tool for plasmid host prediction. Its backbone is a phylogenetic tree of the plasmid hosts (bacteria) from phylum to species. By incorporating the state-of-the-art language model, Transformer, in each node’s taxon classifier, the top-down tree search can accurately predict the host taxonomy for the input plasmid contigs. There are totally 115 taxon classifiers, each corresponding to a node with more than one child node. To use HOTSPOT, you only need to input complete plasmids or plasmid contigs assembled from metagenomic data into the program. 
                                                 """)
-parser.add_argument('--contigs', help='FASTA file of the inputs (one or more contigs)',  default = 'test_contigs.fa')
-parser.add_argument('--len', help='minimum length of contigs for length filter (default 1500)', type=int, default=1500)
+parser.add_argument('--contigs', help='FASTA file of the inputs (one or more contigs, default test_contigs.fa)',  default = 'test_contigs.fa')
+parser.add_argument('--len', help='minimum length (bp) of contigs for length filter (default 1500)', type=int, default=1500)
 parser.add_argument('--threads', help='number of threads to use (default 8)', type=int, default=8)
-parser.add_argument('--dbdir', help='database directory (optional, default database/)',  default = 'database/')
-parser.add_argument('--midfolder', help='folder to store the intermediate files of preprocessing (optional, default temporary_files/)', type=str, default='temporary_files/')
+parser.add_argument('--dbdir', help='database directory (default database/)',  default = 'database/')
+parser.add_argument('--midfolder', help='folder to store the intermediate files from preprocessing (default temporary_files/)', type=str, default='temporary_files/')
 inputs = parser.parse_args()
 
 
@@ -28,11 +28,12 @@ inputs = parser.parse_args()
 def help_info():
     print('')
     print("""The usage of preprocessing.py:
-            [--contigs INPUT_FA]  Input fasta file (containing one or multiple plasmid contigs)
-            [--len MINIMUM_LEN]   Predict only for sequence >= len bp (default 1500)
-            [--threads NUM]       Number of threads to run preprocessing (default 8)
-            [--dbdir DR]          Path to store the database directory (default database/)
-            [--midfolder DIR]     Folder to store the intermediate files of preprocessing (default temporary_files/)
+            [-h, --help]          Show the help message and exit
+            [--contigs INPUT_FA]  FASTA file of the inputs (one or more contigs, default test_contigs.fa)
+            [--len MINIMUM_LEN]   Minimum length (bp) of contigs for length filter (default 1500)
+            [--threads NUM]       Number of threads to use (default 8)
+            [--dbdir DR]          Database directory (default database/)
+            [--midfolder DIR]     Folder to store the intermediate files from preprocessing (default temporary_files/)
     """)
 
 
@@ -43,7 +44,7 @@ if not os.path.isdir(out_fn):
 
 db_dir = inputs.dbdir
 if not os.path.exists(db_dir):
-    print(f'Database directory "{db_dir}" missing or incomplete. Please use option "--dbdir" to specify the database path or place the database files under the default path "database/".')
+    print(f'Database directory "{db_dir}" missing or unreadable. Please use option "--dbdir" to specify the database path or place the database folder under the main directory of HOTSPOT ("HOTSPOT/database/").')
     help_info()
     exit(1)
 
