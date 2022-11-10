@@ -14,6 +14,11 @@ HOTSPOT's backbone is a phylogenetic tree of the plasmid hosts (bacteria) from p
 * [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
 * [HMMER](http://hmmer.org/)
 * [treelib](https://pypi.org/project/treelib/)
+If you want to use the gpu to accelerate the program:
+* cuda
+* Pytorch-gpu
+* For cpu version pytorch: conda install pytorch torchvision torchaudio cpuonly -c pytorch
+
 
 
 # Prepare the database
