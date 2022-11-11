@@ -54,6 +54,12 @@ Similar to the database preparation, if the model path is not under HOTSPOT's ma
 The pre-trained models are a little big because the phylogenetic includes 10, 19, 46, 94, 180, and 272 nodes for the six taxonomic ranks from phylum to species, respectively. We will try to optimize the model sizes in the next version of HOTSPOT.
 
 
+## Download the pre-trained models manually
+If the `prepare_light_mdl.sh` or `prepare_mdl.sh` doesn't work, the access may be denied by Google Drive when many users downloaded the models within 24 hours. In this case, you can manually download the models with the following links:
+* [`models1.tar`](https://drive.google.com/file/d/1az3X7Z88RVFYEAExXK_njJTlDb-CPrc4/view?usp=share_link)
+* [`models2.tar`](https://drive.google.com/file/d/1ldCUZT5OchCtekUegf-uFABDhdATi-Zg/view)
+
+
 # Usage
 Before running the host prediction, you have to use __`preprocessing.py` for length filter and feature encoding__ (including the hypothetical proteins, identified MOB/MPF proteins and Inc group of the inputs. Details are available in the paper "HOTSPOT: Hierarchical hOst predicTion for aSsembled Plasmid cOntigs with Transformer"). The temporary files will be stored in the folder `temporary_files/` by default. Then, `HOTSPOT.py` performs the host prediction with the phylogenetic tree search and pre-trained Transformer models. The results are stored in the TSV file `Result/prediction.tsv` by default.
 
