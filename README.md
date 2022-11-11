@@ -44,7 +44,7 @@ If you don't need the host identification function at the species level, you may
 sh prepare_light_mdl.sh
 ```
 
-Or if you have sufficient disk storage, you can download the complete models (44G):
+Or if you have sufficient disk storage, you can download the complete models (43.9G):
 ```
 sh prepare_mdl.sh
 ```
@@ -56,8 +56,8 @@ The pre-trained models are a little big because the phylogenetic includes 10, 19
 
 ## Download the pre-trained models manually
 If the `prepare_light_mdl.sh` or `prepare_mdl.sh` doesn't work, the access may be denied by Google Drive because many users downloaded the models within 24 hours. In this case, you can manually download the models with the following links:
-* [models1.tar](https://drive.google.com/file/d/1az3X7Z88RVFYEAExXK_njJTlDb-CPrc4/view?usp=share_link) (required, the models to predict host taxa from phylum to genus)
-* [models2.tar](https://drive.google.com/file/d/1ldCUZT5OchCtekUegf-uFABDhdATi-Zg/view) (optional, the models to predict species)
+* [models1.tar](https://drive.google.com/file/d/1az3X7Z88RVFYEAExXK_njJTlDb-CPrc4/view?usp=share_link) (25.6G, required, the models to predict host taxa from phylum to genus)
+* [models2.tar](https://drive.google.com/file/d/1ldCUZT5OchCtekUegf-uFABDhdATi-Zg/view) (18.3G, optional, the models to predict species)
 
 
 # Usage
