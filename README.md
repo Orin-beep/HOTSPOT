@@ -30,7 +30,7 @@ conda env create -f environment.yaml -n hotspot
 ```
 
 
-## Prepare the database
+## Prepare the database (from Google Drive)
 To prepare the database, you can simply use this bash script: 
 ```
 sh prepare_db.sh
@@ -38,7 +38,7 @@ sh prepare_db.sh
 To be sure that the downloaded `database/` folder is placed in the HOTSPOT's main directory. Otherwise, you have to use option `--dbdir` to specify the database path when running `preprocessing.py` and `HOTSPOT.py`.
 
 
-## Prepare the pre-trained models
+## Prepare the pre-trained models (from Google Drive)
 If you don't need the host identification function at the species level, you may only download the pre-trained models from phylum to genus (25.6G):
 ```
 sh prepare_light_mdl.sh
