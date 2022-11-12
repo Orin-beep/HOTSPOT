@@ -63,7 +63,7 @@ After the downloading, you can place the file `models1.tar` or the two files und
 ```
 python uncompresse.py models
 ```
-Then, you have completed the Preparation steps and can use HOTSPOT for host prediction.
+Then, you have completed the preparation steps and can use HOTSPOT for host prediction.
 
 
 # Usage
