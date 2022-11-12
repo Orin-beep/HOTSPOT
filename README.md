@@ -59,7 +59,11 @@ If the `prepare_light_mdl.sh` or `prepare_mdl.sh` doesn't work, the access may b
 * [models1.tar](https://drive.google.com/file/d/1az3X7Z88RVFYEAExXK_njJTlDb-CPrc4/view?usp=share_link) (25.6G, required, the models to predict host taxa from phylum to genus)
 * [models2.tar](https://drive.google.com/file/d/1ldCUZT5OchCtekUegf-uFABDhdATi-Zg/view) (18.3G, optional, the models to predict species)
 
-After the downloading, you can place the file `models1.tar` or the two files under the path `HOTSPOT/models` and run the Python script `uncompress.py` to uncompress them. Then, you have completed the Preparation steps and can use HOTSPOT for host prediction.
+After the downloading, you can place the file `models1.tar` or the two files under the path `HOTSPOT/models` and run the Python script `uncompress.py` to uncompress them:
+```
+python uncompresse.py models
+```
+Then, you have completed the Preparation steps and can use HOTSPOT for host prediction.
 
 
 # Usage
