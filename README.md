@@ -84,7 +84,7 @@ When using the HOTSPOT tool, only one pre-trained classifier is loaded into the 
 | ------------- | ------------- | ------------- |
 | 6.7795h | 3.0805min | 6.8308h |
 
-Notably, more than 99% of the running time is used to run Prodigal and DIAMOND BLASTP.
+Notably, the majority of the running time is used to run Prodigal and DIAMOND BLASTP.
 
 
 ## Early stop mechanism using the Monte Carlo dropout (MC-dropout)
