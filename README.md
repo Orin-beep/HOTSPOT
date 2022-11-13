@@ -2,7 +2,6 @@
 
 HOTSPOT's backbone is a phylogenetic tree of the plasmid hosts (bacteria) from phylum to species. By incorporating the state-of-the-art language model, Transformer, in each node’s taxon classifier, the top-down tree search can accurately predict the host taxonomy for the input plasmid contigs. There are totally 115 taxon classifiers, each corresponding to a node with more than one child node. __To use HOTSPOT, you only need to input complete plasmids or plasmid contigs assembled from metagenomic data into the program.__
 
-Header: Etag=W/"e16084e04ba46b64f5ef6480be42b5ccb28f119d18cc91f14df28e09cf72040f" 
 
 # Required Dependencies
 * Python 3.x
