@@ -61,7 +61,7 @@ If the `prepare_light_mdl.sh` or `prepare_mdl.sh` doesn't work, the access may b
 
 After the downloading, you can place the file `models1.tar` or the two files under the path `HOTSPOT/models/` and run the Python script `uncompress.py` to uncompress them:
 ```
-python uncompresse.py models
+python uncompress.py models
 ```
 Then, you have completed the preparation steps and can use HOTSPOT for host prediction.
 
