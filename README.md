@@ -67,7 +67,7 @@ Then, you have completed the preparation steps and can use HOTSPOT for host pred
 
 
 # Advanced datasets
-We collected multiple datasets containing well-annotated plasmid contigs (>1.5kbp) assembled from different metagenomic data to test HOTSPOT's performance in the paper. These datasets and the corresponding taxonomic label information are uploaded to the `Datasets` folder. Users can use these datasets to become familiar with HOTSPOT or benchmark with other host prediction tools. The datasets comprise:
+We collected multiple datasets containing well-annotated plasmid contigs (>1.5kbp) assembled from different metagenomic data to test HOTSPOT's performance in the paper. These datasets and the corresponding taxonomic label information are uploaded to the `Datasets` folder. The labels annotated with `(novel)` refer to the hosts which are rare and do not exist in our label set. Users can use these datasets to become familiar with HOTSPOT or benchmark with other host prediction tools. The datasets comprise:
 * [Simulated metagenomic data](https://github.com/fmaguire/MAG_gi_plasmid_analysis),
 * Mock metagenomic data (four datasets with accession number SRR072232, SRR072233, SRR172902, and SRR172903),
 * [The Hi-C dataset](https://osf.io/ezb8j/wiki/home/),
