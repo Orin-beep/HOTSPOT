@@ -66,6 +66,15 @@ python uncompresse.py models
 Then, you have completed the preparation steps and can use HOTSPOT for host prediction.
 
 
+# Advanced datasets
+We collected multiple datasets, containing well-annotated plasmid contigs (>1.5kbp) assembled from different metagenomic data, to test HOTSPOT's performance in the paper. These datasets are uploaded to the `Testing_datasets` folder. Users can use these datasets to be familiar with HOTSPOT or benchmark with other host prediction tools. The datasets comprises:
+* [simulated metagenomic data](https://github.com/fmaguire/MAG_gi_plasmid_analysis),
+* mock metagenomic data (four datasets with accession number SRR072232, SRR072233, SRR172902, and SRR172903),
+* [the Hi-C dataset](https://osf.io/ezb8j/wiki/home/),
+* [the CAMI2 marine S0 dataset](https://www.microbiome-cosi.org/cami/cami/cami2).
+The detailed preprocessing steps of the datasets are decribed in our paper.
+
+
 # Usage
 Before running the host prediction, you have to use __`preprocessing.py` for length filter and feature encoding__ (including the hypothetical proteins, identified MOB/MPF proteins and Inc group of the inputs. Details are available in the paper "HOTSPOT: Hierarchical hOst predicTion for aSsembled Plasmid cOntigs with Transformer"). The temporary files will be stored in the folder `temporary_files/` by default. Then, `HOTSPOT.py` performs the host prediction with the phylogenetic tree search and pre-trained Transformer models. The results are stored in the TSV file `Result/prediction.tsv` by default.
 
