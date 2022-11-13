@@ -73,7 +73,7 @@ We collected multiple datasets containing well-annotated plasmid contigs (>1.5kb
 * [The Hi-C dataset](https://osf.io/ezb8j/wiki/home/),
 * [The CAMI2 marine S0 dataset](https://www.microbiome-cosi.org/cami/cami/cami2).
 
-The detailed preprocessing steps of these datasets are decribed in our paper.
+The detailed preprocessing steps of these datasets are described in our paper.
 
 
 # Usage
