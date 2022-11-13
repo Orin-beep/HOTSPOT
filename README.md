@@ -72,7 +72,8 @@ We collected multiple datasets containing well-annotated plasmid contigs (>1.5kb
 * Mock metagenomic data (four datasets with accession number SRR072232, SRR072233, SRR172902, and SRR172903),
 * [The Hi-C dataset](https://osf.io/ezb8j/wiki/home/),
 * [The CAMI2 marine S0 dataset](https://www.microbiome-cosi.org/cami/cami/cami2).
-The detailed preprocessing steps of the datasets are decribed in our paper.
+
+The detailed preprocessing steps of these datasets are decribed in our paper.
 
 
 # Usage
