@@ -77,6 +77,13 @@ python HOTSPOT.py       # It would highly recommend using gpu to accelerate the 
 ```
 
 
+## Running time
+When using the HOTSPOT tool, only one pre-trained classifier is loaded into the GPU at a time, enabling successful running even on a computer with a small GPU memory. Despite the large model size, the prediction process of HOTSPOT is fast. For example, the running time of HOTSPOT on the complete plasmid test set (7,186 plasmids, 530M) is listed in the table below:
+| preprocessing.py | HOTSPOT.py | total running time |
+| 6.7795h | 3.0805min | 6.8308h |
+Notably, ~99% of the running time is used to run Prodigal and DIAMOND BLASTP.
+
+
 ## Early stop mechanism using the Monte Carlo dropout (MC-dropout)
 HOTSPOT provides two special modes, *specific mode* and *accurate mode*, aiming at higher prediction accuracy using the MC-dropout based early stop of the tree search. To enable the early stop, you can use either the option `--mode 2` (*specific mode*) or `--mode 3` (*accurate mode*) when running `HOTSPOT.py`. Notably, the *accurate mode* has a more stringent uncertainty cutoff than the *specific mode*, leading to more accurate prediction but returning taxa in higher levels for some inputs. In addition, the number of the dropout-enabled forward passes (using variance to estimate the prediction uncertainty) can be chosen by the option `--mcnum` (default: 100).
 
