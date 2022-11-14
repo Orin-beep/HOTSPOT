@@ -83,7 +83,7 @@ Before running the host prediction, you have to use __`preprocessing.py` for len
 ## Simple example
 ```
 python preprocessing.py --contigs Example_fasta/multiple_plasmids.fasta
-python HOTSPOT.py       # It would highly recommend using gpu to accelerate the program
+python HOTSPOT.py       # Recommend using gpu to accelerate the program
 ```
 
 
