@@ -88,7 +88,7 @@ python HOTSPOT.py       # Recommend using gpu to accelerate the program
 
 
 ## Running time evaluation
-When using the HOTSPOT tool, only one pre-trained classifier is loaded into the GPU at a time, enabling successful running even on a computer with a small GPU memory. In addition, despite the large model size, the prediction process of HOTSPOT is fast. For example, the running time of HOTSPOT on the complete plasmid test set (7,186 plasmids, 530M, for more detail, please see the HOTSPOT paper) is listed in the table below:
+When using the HOTSPOT tool, only one pre-trained classifier is loaded into the GPU at a time, enabling successful running even on a computer with a small GPU memory. In addition, despite the large model size, the prediction process of HOTSPOT is fast. For example, the running time of HOTSPOT on the complete plasmid test set (7,186 plasmids, 530M, for more detail, please see the HOTSPOT paper) with 8 threads is listed in the table below:
 
 | preprocessing.py | HOTSPOT.py | Total running time |
 | ------------- | ------------- | ------------- |
