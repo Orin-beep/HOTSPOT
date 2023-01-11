@@ -27,6 +27,7 @@ If you want to use the gpu to accelerate the program:
 After cloning this respository, you can use anaconda to install the environment.yaml. This will install all packages you need with gpu mode (make sure you have installed cuda on your system to use the gpu version. Othervise, it will run with cpu version). The command is: 
 ```
 conda env create -f environment.yaml -n hotspot
+conda activate hotspot
 ```
 
 
