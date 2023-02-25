@@ -6,6 +6,7 @@ HOTSPOT's backbone is a phylogenetic tree of the plasmid hosts (bacteria) from p
 # Required Dependencies
 * Python 3.x
 * Numpy
+* bidict
 * Pandas
 * Pytorch>1.8.0
 * [Diamond](https://github.com/bbuchfink/diamond)
