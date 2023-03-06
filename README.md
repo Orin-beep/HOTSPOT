@@ -111,11 +111,12 @@ preprocessing.py:
 ```
 The usage of preprocessing.py:
             [-h, --help]          Show the help message and exit
-            [--contigs INPUT_FA]  FASTA file of the inputs (one or more contigs, default test_contigs.fa)
-            [--len MINIMUM_LEN]   Minimum length (bp) of contigs for length filter (default 1500)
+            [--contigs INPUT_FA]  FASTA file of the input sequences (one or more contigs in a single FASTA file, default test_contigs.fa)
+            [--len MINIMUM_LEN]   Minimum length (bp) of contigs for length filtering (default 1500)
             [--threads NUM]       Number of threads to use (default 8)
             [--dbdir DR]          Database directory (default database/)
             [--midfolder DIR]     Folder to store the intermediate files from preprocessing (default temporary_files/)
+
 ```
 
 HOTSPOT.py:
