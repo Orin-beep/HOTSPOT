@@ -79,7 +79,7 @@ The detailed preprocessing steps of these datasets are described in our paper.
 
 
 # Usage
-Before running the host prediction, you have to use __`preprocessing.py` for length filter and feature encoding__ (including the hypothetical proteins, identified MOB/MPF proteins and Inc group of the inputs. Details are available in the paper "HOTSPOT: Hierarchical hOst predicTion for aSsembled Plasmid cOntigs with Transformer"). The temporary files will be stored in the folder `temporary_files/` by default. Then, `HOTSPOT.py` performs the host prediction with the phylogenetic tree search and pre-trained Transformer models. The results are stored in the TSV file `Result/prediction.tsv` by default.
+Before running the host prediction, you have to use __`preprocessing.py` for length filtering and feature encoding__  The temporary files will be stored in the folder `temporary_files/` by default. After preprocessing, you can use `HOTSPOT.py` for host prediction with the pre-trained Transformer models. The prediction results are stored in the TSV file `Results/host_lineage.tsv` by default.
 
 
 ## Simple example
