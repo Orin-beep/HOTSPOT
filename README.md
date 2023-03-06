@@ -79,7 +79,7 @@ The detailed preprocessing steps of these datasets are described in our paper.
 
 
 # Usage
-Before running the host prediction, you have to use __`preprocessing.py` for length filtering and feature encoding__  The temporary files will be stored in the folder `temporary_files/` by default. After preprocessing, you can use `HOTSPOT.py` for host prediction with the pre-trained Transformer models. The prediction results are stored in the TSV file `Results/host_lineage.tsv` by default.
+Before running the host prediction, you have to use `preprocessing.py` for length filtering and feature encoding. The temporary files will be stored in the folder `temporary_files/` by default. After preprocessing, you can use `HOTSPOT.py` for host prediction with the pre-trained Transformer models. The prediction results are stored in the TSV file `Results/host_lineage.tsv` by default.
 
 
 ## Simple example
