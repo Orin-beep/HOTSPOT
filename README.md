@@ -122,17 +122,18 @@ The usage of preprocessing.py:
 HOTSPOT.py:
 ```
 The usage of HOTSPOT.py:
-            [--midfolder DIR]   Folder to store the intermediate files from preprocessing (default temporary_files/)
+            [--midfolder DIR]   Folder to store the intermediate files from preprocessing (used as the inputs of HOTSPOT.py, default temporary_files/)
             [--mdldir DR]       Pre-trained models' directory (default models/)
             [--dbdir DR]        Database directory (default database/)
-            [--out OUT]         Path of the output file (default Result/prediction.tsv)
+            [--out OUT]         Path to store the output files (default Results/)
             [--threads NUM]     Number of threads to use if 'cpu' is detected ('cuda' not found, default 8)
-            [--mode MOD]        Selected early stop mode.
-                                1: sensitive mode (no early stop used, default)
-                                2: specific mode (enabling the early stop)
-                                3: accurate mode (enabling the early stop with more stringent uncertainty cutoff, leading to more accurate prediction but returning taxa in higher levels for some inputs)
-                                (default 1)
-            [--mcnum MC]        The number of the dropout-enabled forward passes to estimate the uncertainty (default: 100, minimum: 10)
+            [--accurate BOOL]   If this option is chosen by '--accurate True', the MC-dropout based early stop mechanism will be activated with two sets of uncertainty cutoff, and the prediction will cost more time.
+                                1. sensitive mode (the default mode without early stop, output: 'Results/host_lineage.tsv')
+                                2. specific mode (enabling the early stop, output: 'Results/host_lineage_specific.tsv')
+                                3. accurate mode (enabling the early stop with more stringent uncertainty cutoff, leading to more accurate prediction but returning taxa in higher levels for some inputs, output: 'Results/host_lineage_accurate.tsv')
+                                (default False)
+            [--mcnum MC]        The number of the dropout-enabled forward passes to estimate the prediction uncertainty (works when '--accurate True' is chosen, default: 100, minimum: 10)
+
 ```
 
 
