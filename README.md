@@ -142,9 +142,9 @@ The output is a TSV file containing the predicted host lineages from phylum to s
 | Contig | phylum | class | order | family | genus | species |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | NZ_CP050042.1  | Pseudomonadota  | Gammaproteobacteria  | Enterobacterales  | Enterobacteriaceae  | Escherichia  | Escherichia coli  | 
-| NZ_CP083619.1  | Bacillota  | Clostridia  | Eubacteriales  | Peptostreptococcaceae  | Clostridioides  | Clostridioides difficile  |
-| NZ_CP083659.1  | Pseudomonadota  | Gammaproteobacteria  | Moraxellales  | Moraxellaceae  | Acinetobacter  | Acinetobacter variabilis  |
-| Z22927.1  | Actinomycetota  | Actinomycetes  | Corynebacteriales  | Corynebacteriaceae  | Corynebacterium  | Corynebacterium glutamicum  |
+| NZ_CP083619.1  | Bacillota  | Clostridia  | Eubacteriales*  | Peptostreptococcaceae  | Clostridioides*  | Clostridioides difficile*  |
+| NZ_CP083659.1  | Pseudomonadota  | Gammaproteobacteria  | Moraxellales  | Moraxellaceae*  | Acinetobacter  | Acinetobacter variabilis  |
+| Z22927.1  | Actinomycetota  | Actinomycetes*  | Corynebacteriales  | Corynebacteriaceae  | Corynebacterium*  | Corynebacterium glutamicum*  |
 
 
 # Contact
