@@ -1,6 +1,6 @@
-# HOTSPOT: plasmid host prediction
+# HOTSPOT: Hierarchical hOst predicTion for aSsembled Plasmid cOntigs with Transformer
 
-HOTSPOT's backbone is a phylogenetic tree of the plasmid hosts (bacteria) from phylum to species. By incorporating the state-of-the-art language model, Transformer, in each node’s taxon classifier, the top-down tree search can accurately predict the host taxonomy for the input plasmid contigs. There are totally 115 taxon classifiers, each corresponding to a node with more than one child node. __To use HOTSPOT, you only need to input complete plasmids or plasmid contigs assembled from metagenomic data into the program.__
+HOTSPOT's backbone is a phylogenetic tree of plasmids' hosts (bacteria) from phylum to species. By incorporating the state-of-the-art language model, Transformer, in each node’s taxon classifier, the top-down tree search can accurately predict the hosts' taxonomic labels. __To use HOTSPOT, you only need to input plasmid sequences (complete or segmented) into the program.__
 
 
 # Required Dependencies
