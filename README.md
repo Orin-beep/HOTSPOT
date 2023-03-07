@@ -118,19 +118,18 @@ python HOTSPOT.py --accurate 1
 
 
 # Test datasets
-We collected multiple datasets containing well-annotated plasmid contigs (>1.5kbp) assembled from different metagenomic data to test HOTSPOT's performance in the paper. These datasets and the corresponding taxonomic label information are uploaded to the `Datasets` folder. The labels annotated with `(novel)` refer to the hosts which are rare and do not exist in our label set. Users can use these datasets to become familiar with HOTSPOT or benchmark with other host prediction tools. The datasets comprise:
-* [Simulated metagenomic data](https://github.com/fmaguire/MAG_gi_plasmid_analysis),
-* Mock metagenomic data (four datasets with accession number SRR072232, SRR072233, SRR172902, and SRR172903),
-* [The Hi-C dataset](https://osf.io/ezb8j/wiki/home/),
-* [The CAMI2 marine S0 dataset](https://www.microbiome-cosi.org/cami/cami/cami2).
-
-The detailed preprocessing steps of these datasets are described in our paper.
+You can download the plasmid contigs and raw data of the datasets evluated in the paper 'HOTSPOT: Hierarchical hOst predicTion for aSsembled Plasmid cOntigs with Transformer' with the following links:
+| Datasets | Annotated plasmid contigs | Raw data and description |
+| ------------- | ------------- | ------------- |
+| Simulated metagenomic data | test | test |
+| Mock metagenomic data | test | test |
+| Hi-C dataset | test | test |
 
 
 # Running time evaluation
 We run HOTSPOT with 8 threads and gpu on 4,536 complete plasmids (333MB) as an example. The required running time for the two steps is listed below:
 
-| preprocessing.py | HOTSPOT.py | total running time |
+| preprocessing.py | HOTSPOT.py | Total running time |
 | ------------- | ------------- | ------------- |
 | 6.7795h | 3.0805min | 6.8308h |
 
