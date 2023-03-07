@@ -44,9 +44,14 @@ If the bash scripts don't work, you can manually download the database and model
 * [database.tgz](https://drive.google.com/file/d/1VIbfp35X5JMiA7BfOS3lNBycT73uFcTN/view)
 * [models.tgz](https://drive.google.com/file/d/1L6ogZhdAWJ7Ns8Hz59m7W2kFPMcMTC6u/view)
 
-After downloading the `database.tgz` and `models.tgz` into 
-To be sure that the downloaded `database/` folder is placed in the HOTSPOT's main directory. Otherwise, you have to use option `--dbdir` to specify the database path when running `preprocessing.py` and `HOTSPOT.py`.
+After downloading the `database.tgz` and `models.tgz` to HOTSPOT's main directory, you have to unzip them:
+```
+tar -zxvf database.tgz
+rm database.tgz
 
+tar -zxvf models.tgz
+rm models.tgz
+```
 
 
 # Usage
