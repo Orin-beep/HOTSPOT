@@ -109,13 +109,12 @@ The usage of HOTSPOT.py:
 ```
 
 ## Early stop mechanism using the Monte Carlo dropout (MC-dropout)
-HOTSPOT provides two special modes, *specific mode* and *accurate mode*, aiming at higher prediction accuracy using the MC-dropout based early stop of the tree search. To enable the early stop, you can use either the option `--mode 2` (*specific mode*) or `--mode 3` (*accurate mode*) when running `HOTSPOT.py`. Notably, the *accurate mode* has a more stringent uncertainty cutoff than the *specific mode*, leading to more accurate prediction but returning taxa in higher levels for some inputs. In addition, the number of the dropout-enabled forward passes (using variance to estimate the prediction uncertainty) can be chosen by the option `--mcnum` (default: 100).
+HOTSPOT provides two special modes, *specific mode* and *accurate mode*, aiming at higher accuracy using the MC-dropout based early stop for the tree search. To enable the early stop, you can use the option `--accurate 1` when running `HOTSPOT.py`, and the results of the two modes will be stored in the output directory. Specifically, the *accurate mode* has a more stringent uncertainty cutoff than the *specific mode*, leading to more accurate prediction but returning taxa in higher levels for some inputs. In addition, the number of the dropout-enabled forward passes can be chosen by the option `--mcnum` (default: 100).
 
 For example:
 ```
-python HOTSPOT.py --mode 3 --mcnum 80
+python HOTSPOT.py --accurate 1
 ```
-
 
 
 # Advanced datasets
