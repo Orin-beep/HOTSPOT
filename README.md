@@ -130,11 +130,11 @@ The detailed preprocessing steps of these datasets are described in our paper.
 # Running time evaluation
 We run HOTSPOT with 8 threads and gpu on 4,536 complete plasmids (333MB) as an example. The required running time for the two steps is listed below:
 
-| preprocessing.py | HOTSPOT.py | Total running time |
+| preprocessing.py | HOTSPOT.py | total running time |
 | ------------- | ------------- | ------------- |
 | 6.7795h | 3.0805min | 6.8308h |
 
-We can observe that most of the time is used to run Prodigal and DIAMOND BLASTP for preprocessing.
+Thus, most of the time is used to run Prodigal and DIAMOND BLASTP for preprocessing.
 
 
 # Contact
