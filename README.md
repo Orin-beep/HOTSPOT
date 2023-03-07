@@ -122,7 +122,7 @@ You can download the plasmid contigs and raw data of the datasets evluated in th
 | Datasets | Annotated plasmid contigs | Raw data and description |
 | ------------- | ------------- | ------------- |
 | Simulated metagenomic data | [plasmid_contigs_mag.fa](https://drive.google.com/file/d/1WDOOG5Qr3uD5v3HJL16QsBaH4Cqdnvg9/view?usp=share_link) | [original_dataset.tar.gz](https://drive.google.com/file/d/1fZgyb5jHmSwMKzB3Co4mVf_AMFVsurDJ/view) contains the assembled contigs and the code generating the simulated data|
-| Mock metagenomic data | test | test |
+| Mock metagenomic data | test | [SRR072232](https://www.ncbi.nlm.nih.gov/sra/SRR072232), [SRR072233](https://www.ncbi.nlm.nih.gov/sra/?term=SRR072233), [SRR172902](https://www.ncbi.nlm.nih.gov/sra/?term=SRR172902), [SRR172903](https://www.ncbi.nlm.nih.gov/sra/?term=SRR172903) |
 | Hi-C dataset | [plasmid_contigs_hi-c.fa](https://drive.google.com/file/d/1iMPZG6tqbf95y9Y6MJIeB3QG8hiq7h19/view) | [wastewater_hi-c_data.tar.gz](https://drive.google.com/file/d/1Ka_eMr9LDkNU5nZJW7OP6Ea1OeiWFuM2/view). Data source: https://osf.io/ezb8j/wiki/home/ |
 
 
