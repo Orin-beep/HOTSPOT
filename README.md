@@ -117,7 +117,7 @@ python HOTSPOT.py --accurate 1
 ```
 
 
-# Advanced datasets
+# Test datasets
 We collected multiple datasets containing well-annotated plasmid contigs (>1.5kbp) assembled from different metagenomic data to test HOTSPOT's performance in the paper. These datasets and the corresponding taxonomic label information are uploaded to the `Datasets` folder. The labels annotated with `(novel)` refer to the hosts which are rare and do not exist in our label set. Users can use these datasets to become familiar with HOTSPOT or benchmark with other host prediction tools. The datasets comprise:
 * [Simulated metagenomic data](https://github.com/fmaguire/MAG_gi_plasmid_analysis),
 * Mock metagenomic data (four datasets with accession number SRR072232, SRR072233, SRR172902, and SRR172903),
@@ -127,14 +127,14 @@ We collected multiple datasets containing well-annotated plasmid contigs (>1.5kb
 The detailed preprocessing steps of these datasets are described in our paper.
 
 
-## Running time evaluation
-When using the HOTSPOT tool, only one pre-trained classifier is loaded into the GPU at a time, enabling successful running even on a computer with a small GPU memory. In addition, despite the large model size, the prediction process of HOTSPOT is fast. For example, the running time of HOTSPOT on the complete plasmid test set (7,186 plasmids, 530M, for more detail, please see the HOTSPOT paper) with 8 threads is listed in the table below:
+# Running time evaluation
+We run HOTSPOT with 8 threads and gpu on 4,536 complete plasmids (333MB) as an example. The required running time for the two steps is listed below:
 
 | preprocessing.py | HOTSPOT.py | Total running time |
 | ------------- | ------------- | ------------- |
 | 6.7795h | 3.0805min | 6.8308h |
 
-Notably, the majority of the running time is used to run Prodigal and DIAMOND BLASTP.
+We can observe that most of the time is used to run Prodigal and DIAMOND BLASTP for preprocessing.
 
 
 # Contact
