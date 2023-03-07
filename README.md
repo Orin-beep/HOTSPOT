@@ -123,7 +123,7 @@ You can download the plasmid contigs and raw data of the datasets evluated in th
 | ------------- | ------------- | ------------- |
 | Simulated metagenomic data | test | test |
 | Mock metagenomic data | test | test |
-| Hi-C dataset | test | test |
+| Hi-C dataset | [plasmid_contigs_hi-c.fa](https://drive.google.com/file/d/1iMPZG6tqbf95y9Y6MJIeB3QG8hiq7h19/view) | test |
 
 
 # Running time evaluation
