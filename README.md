@@ -74,7 +74,7 @@ The output is a TSV file containing the predicted host lineages from phylum to s
 | NZ_CP083659.1  | Pseudomonadota  | Gammaproteobacteria  | Moraxellales  | Moraxellaceae*  | Acinetobacter  | Acinetobacter variabilis  |
 | Z22927.1  | Actinomycetota  | Actinomycetes*  | Corynebacteriales  | Corynebacteriaceae  | Corynebacterium*  | Corynebacterium glutamicum*  |
 
-Notably, the taxon labeled with star `*` is not predicted by taxon classfier because its parent node has only one child in the tree. 
+Notably, the taxon labeled with a star `*` is not predicted by the taxon classifier because its parent node has only one child in the tree. 
 The current phylogenetic tree used by HOTSPOT is smaller than the complete bacterial phylogenetic tree because: 1) not all bacteria contain plasmids, and 2) the host taxa covered by available sequenced plasmids are limited. Thus, we advise users to examine starred taxa more carefully.
 
 
