@@ -40,7 +40,7 @@ sh prepare_mdl.sh       # download and unzip the models, 13.14 GB
 
 
 ## Download the database and pre-trained models manually
-If the bash script doesn't work, you can manually download the database and models using the following links:
+If the bash scripts don't work, you can manually download the database and models using the following links:
 * [database.tgz](https://drive.google.com/file/d/1VIbfp35X5JMiA7BfOS3lNBycT73uFcTN/view)
 * [models.tgz](https://drive.google.com/file/d/1L6ogZhdAWJ7Ns8Hz59m7W2kFPMcMTC6u/view)
 
