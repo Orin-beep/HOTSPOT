@@ -64,16 +64,20 @@ python HOTSPOT.py       # Recommend using gpu to accelerate the program
 ```
 
 
+# Format of the output file
+The output is a TSV file containing the predicted host lineages from phylum to species. Each row corresponds to one input plasmid contig. For example:
+
+| Contig | phylum | class | order | family | genus | species |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| NZ_CP050042.1  | Pseudomonadota  | Gammaproteobacteria  | Enterobacterales  | Enterobacteriaceae  | Escherichia  | Escherichia coli  | 
+| NZ_CP083619.1  | Bacillota  | Clostridia  | Eubacteriales*  | Peptostreptococcaceae  | Clostridioides*  | Clostridioides difficile*  |
+| NZ_CP083659.1  | Pseudomonadota  | Gammaproteobacteria  | Moraxellales  | Moraxellaceae*  | Acinetobacter  | Acinetobacter variabilis  |
+| Z22927.1  | Actinomycetota  | Actinomycetes*  | Corynebacteriales  | Corynebacteriaceae  | Corynebacterium*  | Corynebacterium glutamicum*  |
+
+N
 
 
 
-## Early stop mechanism using the Monte Carlo dropout (MC-dropout)
-HOTSPOT provides two special modes, *specific mode* and *accurate mode*, aiming at higher prediction accuracy using the MC-dropout based early stop of the tree search. To enable the early stop, you can use either the option `--mode 2` (*specific mode*) or `--mode 3` (*accurate mode*) when running `HOTSPOT.py`. Notably, the *accurate mode* has a more stringent uncertainty cutoff than the *specific mode*, leading to more accurate prediction but returning taxa in higher levels for some inputs. In addition, the number of the dropout-enabled forward passes (using variance to estimate the prediction uncertainty) can be chosen by the option `--mcnum` (default: 100).
-
-For example:
-```
-python HOTSPOT.py --mode 3 --mcnum 80
-```
 
 
 ## Full command-line options
@@ -97,7 +101,7 @@ The usage of HOTSPOT.py:
             [--dbdir DR]        Database directory (default database/)
             [--out OUT]         Path to store the output files (default Results/)
             [--threads NUM]     Number of threads to use if 'cpu' is detected ('cuda' not found, default 8)
-            [--accurate BOOL]   If this option is chosen by '--accurate True', the MC-dropout based early stop mechanism will be activated with two sets of uncertainty cutoff, and the prediction will cost more time.
+            [--accurate ACC]    If this parameter is 1, the MC-dropout based early stop mechanism will be activated with two sets of uncertainty cutoff, and the prediction will cost more time.
                                 1. sensitive mode (the default mode without early stop, output: 'Results/host_lineage.tsv')
                                 2. specific mode (enabling the early stop, output: 'Results/host_lineage_specific.tsv')
                                 3. accurate mode (enabling the early stop with more stringent uncertainty cutoff, leading to more accurate prediction but returning taxa in higher levels for some inputs, output: 'Results/host_lineage_accurate.tsv')
@@ -106,16 +110,14 @@ The usage of HOTSPOT.py:
 
 ```
 
+## Early stop mechanism using the Monte Carlo dropout (MC-dropout)
+HOTSPOT provides two special modes, *specific mode* and *accurate mode*, aiming at higher prediction accuracy using the MC-dropout based early stop of the tree search. To enable the early stop, you can use either the option `--mode 2` (*specific mode*) or `--mode 3` (*accurate mode*) when running `HOTSPOT.py`. Notably, the *accurate mode* has a more stringent uncertainty cutoff than the *specific mode*, leading to more accurate prediction but returning taxa in higher levels for some inputs. In addition, the number of the dropout-enabled forward passes (using variance to estimate the prediction uncertainty) can be chosen by the option `--mcnum` (default: 100).
 
-# Format of the output file
-The output is a TSV file containing the predicted host lineages from phylum to species. Each row corresponds to one input plasmid contig. For example:
+For example:
+```
+python HOTSPOT.py --mode 3 --mcnum 80
+```
 
-| Contig | phylum | class | order | family | genus | species |
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| NZ_CP050042.1  | Pseudomonadota  | Gammaproteobacteria  | Enterobacterales  | Enterobacteriaceae  | Escherichia  | Escherichia coli  | 
-| NZ_CP083619.1  | Bacillota  | Clostridia  | Eubacteriales*  | Peptostreptococcaceae  | Clostridioides*  | Clostridioides difficile*  |
-| NZ_CP083659.1  | Pseudomonadota  | Gammaproteobacteria  | Moraxellales  | Moraxellaceae*  | Acinetobacter  | Acinetobacter variabilis  |
-| Z22927.1  | Actinomycetota  | Actinomycetes*  | Corynebacteriales  | Corynebacteriaceae  | Corynebacterium*  | Corynebacterium glutamicum*  |
 
 
 # Advanced datasets
