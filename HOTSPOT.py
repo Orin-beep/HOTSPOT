@@ -42,7 +42,7 @@ def help_info():
             [--dbdir DR]        Database directory (default database/)
             [--out OUT]         Path to store the output files (default Results/)
             [--threads NUM]     Number of threads to use if 'cpu' is detected ('cuda' not found, default 8)
-            [--accurate ACC]   If this parameter is 1, the MC-dropout based early stop mechanism will be activated with two sets of uncertainty cutoff, and the prediction will cost more time.
+            [--accurate ACC]    If this parameter is 1, the MC-dropout based early stop mechanism will be activated with two sets of uncertainty cutoff, and the prediction will cost more time.
                                 1. sensitive mode (the default mode without early stop, output: 'Results/host_lineage.tsv')
                                 2. specific mode (enabling the early stop, output: 'Results/host_lineage_specific.tsv')
                                 3. accurate mode (enabling the early stop with more stringent uncertainty cutoff, leading to more accurate prediction but returning taxa in higher levels for some inputs, output: 'Results/host_lineage_accurate.tsv')
