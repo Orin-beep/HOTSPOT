@@ -20,7 +20,7 @@ If you want to use the gpu to accelerate the program:
 * cuda
 * Pytorch-gpu
 * For cpu version pytorch: ```conda install pytorch torchvision torchaudio cpuonly -c pytorch```
-* For gpu version pytorch: Search [pytorch](https://pytorch.org/) to find the correct cuda version according to your computer
+* For gpu version pytorch: Search [pytorch](https://pytorch.org/get-started/previous-versions/) to find the correct cuda version according to your computer
 
 
 ## Prepare the environment
