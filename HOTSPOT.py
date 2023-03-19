@@ -59,10 +59,9 @@ if not os.path.exists(db_dir):
     help_info()
     exit(1)
 
-out_dir = os.path.dirname(inputs.out)
-if out_dir != '':
-    if not os.path.isdir(out_dir):
-        os.makedirs(out_dir)
+out_dir = inputs.out
+if(os.path.exists(out_dir)==False):
+    os.system(f'mkdir {out_dir}')
 
 out_fn = inputs.midfolder
 if(os.path.exists(out_fn)==False):
