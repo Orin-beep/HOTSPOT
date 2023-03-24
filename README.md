@@ -119,7 +119,7 @@ python HOTSPOT.py --accurate 1
 
 
 # Test datasets
-You can download the plasmid contigs and raw data of the datasets evluated in the paper 'HOTSPOT: Hierarchical hOst predicTion for aSsembled Plasmid cOntigs with Transformer' with the following links:
+You can download the plasmid contigs and raw data of the datasets evaluated in the paper 'HOTSPOT: Hierarchical hOst predicTion for aSsembled Plasmid cOntigs with Transformer' with the following links:
 | Datasets | Annotated plasmid contigs | Raw data and description |
 | ------------- | ------------- | ------------- |
 | Simulated metagenomic data | [plasmid_contigs_mag.fa](https://drive.google.com/file/d/1jUyKpcJZj2gLJtnuuj-UoD4Wsd1wYdT6/view?usp=share_link) | [original_dataset.tar.gz](https://drive.google.com/file/d/1fZgyb5jHmSwMKzB3Co4mVf_AMFVsurDJ/view) contains the assembled contigs and the code generating the simulated data|
