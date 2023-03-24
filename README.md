@@ -105,7 +105,7 @@ The usage of HOTSPOT.py:
                                 2. specific mode (enabling the early stop, output: 'Results/host_lineage_specific.tsv')
                                 3. accurate mode (enabling the early stop with more stringent uncertainty cutoff, leading to more accurate prediction but returning taxa in higher levels for some inputs, output: 'Results/host_lineage_accurate.tsv')
                                 (default 0)
-            [--mcnum MC]        The number of the dropout-enabled forward passes to estimate the prediction uncertainty (works when '--accurate True' is chosen, default: 100, minimum: 10)
+            [--mcnum MC]        The number of the dropout-enabled forward passes to estimate the prediction uncertainty (works when '--accurate 1' is chosen, default: 100, minimum: 10)
 
 ```
 
