@@ -12,7 +12,7 @@ HOTSPOT is a learning-based tool designed for plasmid host prediction. Its backb
 * [Diamond](https://github.com/bbuchfink/diamond)
 * [Prodigal](https://github.com/hyattpd/Prodigal)
 * [Biopython](https://biopython.org/)
-* [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
+* [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi)=2.13.0
 * [HMMER](http://hmmer.org/)
 * [treelib](https://pypi.org/project/treelib/)
 
