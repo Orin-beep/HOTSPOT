@@ -86,8 +86,8 @@ The results will be saved in a TSV file (default: results/host_lineage.tsv) cont
 The dash '-' indicates that HOTSPOT cannot provide accurate predictions for the corresponding input at this taxonomic level.
 
 
-## Early stop mechanism with the Monte Carlo dropout (MC-dropout)
-HOTSPOT provides a special *accurate mode*, aiming at higher accuracy with the MC-dropout based early stop. You can activate this mode with the option `--accurate_mode True`. For more professional users, you can use the option `--mc_num` to specify the number of dropout-enabled forward passes. Example:
+## Accurate mode with Monte Carlo dropout (MC-dropout)
+HOTSPOT provides a specialized *accurate mode* designed to enhance accuracy using MC-dropout based early stop. You can activate this mode using the `--accurate_mode True` option. For advanced users, you can utilize the `--mc_num`, `--min_mean`, and `--max_var` options to have control over the specific implementation details of the MC-dropout mechanism. Detailed usage of these options is shown in the __Full command-line options__ section. Example:
 
 ```
 python hotspot.py --accurate_mode True
