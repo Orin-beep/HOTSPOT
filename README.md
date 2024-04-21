@@ -3,12 +3,10 @@
 HOTSPOT is a deep learning tool based on the Transformer model, specifically designed for predicting the hosts of plasmids. __To use HOTSPOT, you can easily input your plasmid DNA sequences (complete plasmids or contigs) into the program.__ Subsequently, you will obtain prediction results of the hosts' taxa, ranging from phylum to species level.
 
 
-
 #### *__[Update - 2024 - 04 - 21]__* :  <BR/>
-
 * *We substantially reduce HOTSPOT's model size by training six models, with each model corresponding to one of the six taxonomic levels. <BR/>*
 
-  
+
 # Required Dependencies
 * Python 3.x
 * Numpy
