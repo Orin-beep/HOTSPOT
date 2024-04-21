@@ -39,11 +39,11 @@ conda activate hotspot
 ```
 
 
-## Prepare the database and pre-trained models (from Google Drive)
-To download the database and pre-trained models, you can simply use these bash scripts: 
+## Prepare default database and models (from Google Drive)
+To download the default database and models, you can use the following bash scripts: 
 ```
-sh prepare_db.sh        # download and unzip the database, 161.2 MB
-sh prepare_mdl.sh       # download and unzip the models, 13.14 GB
+sh prepare_db.sh        # download and unzip database, 161.2 MB
+sh prepare_mdl.sh       # download and unzip models, 13.14 GB
 ```
 
 
