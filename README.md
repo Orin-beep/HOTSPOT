@@ -10,24 +10,24 @@ HOTSPOT is a deep learning tool based on the Transformer model, specifically des
 * *We substantially reduce HOTSPOT's model size by training six models, with each model corresponding to one of the six taxonomic levels. <BR/>*
 
 
-# Required Dependencies
-* Python 3.x
-* Numpy
-* bidict
-* Pandas
-* Pytorch>1.8.0
-* [Diamond](https://github.com/bbuchfink/diamond)
+## Dependencies
+* [Python 3.x](https://www.python.org/downloads/)
+* [NumPy](https://pypi.org/project/numpy/)
+* [bidict](https://pypi.org/project/bidict/)
+* [Pandas](https://pypi.org/project/pandas/)
+* [PyTorch](https://pytorch.org/get-started/previous-versions/)>1.8.0
+* [diamond](https://github.com/bbuchfink/diamond)
 * [Prodigal](https://github.com/hyattpd/Prodigal)
-* [Biopython](https://biopython.org/)
+* [biopython](https://pypi.org/project/biopython/)
 * [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi)=2.13.0
-* [HMMER](http://hmmer.org/)
+* [HMMER](https://anaconda.org/bioconda/hmmer)
 * [treelib](https://pypi.org/project/treelib/)
 
-If you want to use the gpu to accelerate the program:
-* cuda
-* Pytorch-gpu
-* For cpu version pytorch: ```conda install pytorch torchvision torchaudio cpuonly -c pytorch```
-* For gpu version pytorch: Search [pytorch](https://pytorch.org/get-started/previous-versions/) to find the correct cuda version according to your computer
+If you want to use the GPU to accelerate the program:
+* CUDA
+* PyTorch-GPU
+* For CPU version PyTorch: ```conda install pytorch torchvision torchaudio cpuonly -c pytorch```
+* For GPU version PyTorch: Search [pytorch](https://pytorch.org/get-started/previous-versions/) to find the correct cuda version according to your computer
 
 
 ## Prepare the environment
