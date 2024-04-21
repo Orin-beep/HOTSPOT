@@ -87,7 +87,7 @@ The dash '-' indicates that HOTSPOT cannot provide accurate predictions for the 
 
 
 ## Accurate mode with Monte Carlo dropout (MC-dropout)
-HOTSPOT provides a specialized *accurate mode* designed to enhance accuracy using MC-dropout based early stop. You can activate this mode using the `--accurate_mode True` option. For advanced users, you can utilize the `--mc_num`, `--min_mean`, and `--max_var` options to have control over the specific implementation details of the MC-dropout mechanism. Detailed usage of these options is shown in the __Full command-line options__ section. Example:
+HOTSPOT provides a specialized *accurate mode* designed to enhance accuracy using MC-dropout based early stop. You can activate this mode using the `--accurate_mode True` option. For advanced users, you can utilize the `--mc_num`, `--min_mean`, and `--max_var` options to have control over the specific implementation details of the MC-dropout mechanism. Detailed usage of these options is shown in the following __Full command-line options__ section. Example:
 
 ```
 python hotspot.py --accurate_mode True
@@ -150,6 +150,13 @@ Usage of train.py:
         [--batch_size BATCH_SIZE]   batch size for training the models, default: 200
         [--epoch_num EPOCH_NUM] number of epochs for training the models, default: 20
         [--dropout DROPOUT] dropout rate for training the models, default: 0.5 
+```
+
+
+## References:
+how to cite this tool:
+```
+Ji, Yongxin, et al. "HOTSPOT: hierarchical host prediction for assembled plasmid contigs with transformer." Bioinformatics 39.5 (2023): btad283. https://academic.oup.com/bioinformatics/article/39/5/btad283/7136643
 ```
 
 
