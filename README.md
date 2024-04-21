@@ -64,17 +64,17 @@ rm models.tgz
 
 
 # Usage
-Before predicting the hosts, you have to run `preprocessing.py`, which filters lengths and encodes features for input plasmid sequences. Then, you can use `HOTSPOT.py` for host prediction with the pre-trained Transformer models. By default, the temporary files are stored in the folder `temporary_files/`, and the prediction results are stored in the TSV file `Results/host_lineage.tsv`.
+Before running HOTSPOT, you should run `preprocessing.py` to encode the input plasmid sequences into sentences. After that, you can use `hotspot.py` for host prediction.
 
 ## Simple example
 ```
-python preprocessing.py --contigs Example_fasta/multiple_plasmids.fasta
-python HOTSPOT.py       # Recommend using gpu to accelerate the program
+python preprocessing.py
+python hotspot.py
 ```
 
 
 ## Format of the output file
-The results will be saved in a TSV file containing the predicted host lineages from phylum to species level. Each row corresponds to an input plasmid sequence. Examples:
+The results will be saved in a TSV file (default: results/host_lineage.tsv) containing the predicted host lineages from phylum to species level. Each row corresponds to an input plasmid sequence. Examples:
 
 | Contig | Phylum | Class | Order | Family | Genus | Species |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
