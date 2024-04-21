@@ -10,6 +10,7 @@ HOTSPOT is a deep learning tool based on the Transformer model, specifically des
 * *We substantially reduce HOTSPOT's model size by training six models, with each model corresponding to one of the six taxonomic levels. <BR/>*
 
 
+# Install (Linux or ubuntu only)
 ## Dependencies
 * [Python 3.x](https://www.python.org/downloads/)
 * [NumPy](https://pypi.org/project/numpy/)
