@@ -3,6 +3,9 @@
 HOTSPOT is a deep learning tool based on the Transformer model, specifically designed for predicting the hosts of plasmids. __To use HOTSPOT, you can easily input your plasmid DNA sequences (complete plasmids or contigs) into the program.__ Subsequently, you will obtain prediction results of the hosts' taxa, ranging from phylum to species level.
 
 
+### E-mail: yongxinji2-c@my.cityu.edu.hk
+
+
 #### *__[Update - 2024 - 04 - 21]__* :  <BR/>
 * *We substantially reduce HOTSPOT's model size by training six models, with each model corresponding to one of the six taxonomic levels. <BR/>*
 
@@ -122,30 +125,3 @@ python HOTSPOT.py --accurate 1
 ```
 
 
-# Test datasets
-You can download the plasmid contigs and raw data of the datasets evaluated in the paper 'HOTSPOT: Hierarchical hOst predicTion for aSsembled Plasmid cOntigs with Transformer' with the following links:
-| Datasets | Annotated plasmid contigs | Raw data and description |
-| ------------- | ------------- | ------------- |
-| Simulated metagenomic data | [plasmid_contigs_mag.fa](https://drive.google.com/file/d/1jUyKpcJZj2gLJtnuuj-UoD4Wsd1wYdT6/view?usp=share_link) | [original_dataset.tar.gz](https://drive.google.com/file/d/1fZgyb5jHmSwMKzB3Co4mVf_AMFVsurDJ/view) contains the assembled contigs and the code generating the simulated data|
-| Mock metagenomic data | [SRR072232.fasta](https://drive.google.com/file/d/1fMcbmGkMfPBfx1T2ysEVL-uCoxwCFbxQ/view), [SRR072233.fasta](https://drive.google.com/file/d/1xmgfTFkbcu0neZS_qVqmqOpS6Lhjh9FG/view), [SRR172902.fasta](https://drive.google.com/file/d/1Ya548WWe9UPXNgBsqfleap0n1u4xbamq/view), [SRR172903.fasta](https://drive.google.com/file/d/1l6msS2l7qGjYOWAqlMNUE7vOw5w2Hjbm/view) | [SRR072232](https://www.ncbi.nlm.nih.gov/sra/SRR072232), [SRR072233](https://www.ncbi.nlm.nih.gov/sra/?term=SRR072233), [SRR172902](https://www.ncbi.nlm.nih.gov/sra/?term=SRR172902), [SRR172903](https://www.ncbi.nlm.nih.gov/sra/?term=SRR172903). The reference genomes: [reference_genomes_mock.fasta](https://drive.google.com/file/d/159VNsSoPbMQWJmQnPYqqW4lJ8bTLTN6l/view) |
-| Hi-C dataset | [plasmid_contigs_hi-c.fa](https://drive.google.com/file/d/1ZysHSuT2afdqDCkYxs44XCk4aqyYXFyu/view?usp=share_link) | [wastewater_hi-c_data.tar.gz](https://drive.google.com/file/d/1Ka_eMr9LDkNU5nZJW7OP6Ea1OeiWFuM2/view). Data source: https://osf.io/ezb8j/wiki/home/ |
-
-
-# Running time evaluation
-We run HOTSPOT with 8 threads and gpu on 4,536 complete plasmids (333MB) as an example. The required running time for the two steps is listed below:
-
-| preprocessing.py | HOTSPOT.py | Total running time |
-| ------------- | ------------- | ------------- |
-| 3h38min | 52.65s | 3h39min |
-
-Thus, most of the time is used to run Prodigal and DIAMOND BLASTP for preprocessing.
-
-
-# Contact
-If you have any questions, please email us:
-  
->yongxinji2-c@my.cityu.edu.hk (Yongxin JI)
-  
->jyshang2-c@my.cityu.edu.hk (Jiayu SHANG)
-  
->xubotang2-c@my.cityu.edu.hk (Xubo TANG)
