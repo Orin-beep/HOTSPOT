@@ -38,7 +38,7 @@ cd HOTSPOT/
 conda env create -f environment.yaml -n hotspot
 conda activate hotspot
 ```
-If Anaconda fails to work, you can prepare the environment by individually installing the packages listed in the "<b>Dependencies<b>" section.
+If Anaconda fails to work, you can prepare the environment by individually installing the packages listed in the Dependencies section.
 
 ## Prepare default database and models (from Google Drive)
 To download the default database and models, you can use the following bash scripts: 
