@@ -124,4 +124,538 @@ For example (the prediction will take more time):
 python HOTSPOT.py --accurate 1
 ```
 
+## The default plasmid hosts' phylogenetic tree
+```
+Bacteria
+├── Actinomycetota
+│   └── Actinomycetes
+│       ├── Bifidobacteriales
+│       │   └── Bifidobacteriaceae
+│       │       └── Bifidobacterium
+│       │           └── Bifidobacterium longum
+│       ├── Kitasatosporales
+│       │   └── Streptomycetaceae
+│       │       └── Streptomyces
+│       ├── Micrococcales
+│       │   ├── Microbacteriaceae
+│       │   │   ├── Clavibacter
+│       │   │   │   └── Clavibacter michiganensis
+│       │   │   └── Curtobacterium
+│       │   └── Micrococcaceae
+│       │       ├── Arthrobacter
+│       │       └── Paenarthrobacter
+│       ├── Mycobacteriales
+│       │   ├── Corynebacteriaceae
+│       │   │   └── Corynebacterium
+│       │   │       └── Corynebacterium glutamicum
+│       │   ├── Gordoniaceae
+│       │   │   └── Gordonia
+│       │   ├── Mycobacteriaceae
+│       │   │   ├── Mycobacterium
+│       │   │   │   ├── Mycobacterium avium
+│       │   │   │   └── Mycobacterium intracellulare
+│       │   │   ├── Mycobacteroides
+│       │   │   │   └── Mycobacteroides abscessus
+│       │   │   └── Mycolicibacterium
+│       │   ├── Nocardiaceae
+│       │   │   ├── Nocardia
+│       │   │   ├── Prescottella
+│       │   │   │   └── Prescottella equi
+│       │   │   └── Rhodococcus
+│       │   │       ├── Rhodococcus erythropolis
+│       │   │       ├── Rhodococcus pyridinivorans
+│       │   │       └── Rhodococcus qingshengii
+│       │   └── Tsukamurellaceae
+│       │       └── Tsukamurella
+│       │           └── Tsukamurella tyrosinosolvens
+│       ├── Propionibacteriales
+│       ├── Pseudonocardiales
+│       │   └── Pseudonocardiaceae
+│       └── Streptosporangiales
+├── Bacillota
+│   ├── Bacilli
+│   │   ├── Bacillales
+│   │   │   ├── Bacillaceae
+│   │   │   │   ├── Bacillus
+│   │   │   │   │   ├── Bacillus anthracis
+│   │   │   │   │   ├── Bacillus cereus
+│   │   │   │   │   ├── Bacillus cytotoxicus
+│   │   │   │   │   ├── Bacillus licheniformis
+│   │   │   │   │   ├── Bacillus mycoides
+│   │   │   │   │   ├── Bacillus paranthracis
+│   │   │   │   │   ├── Bacillus subtilis
+│   │   │   │   │   ├── Bacillus thuringiensis
+│   │   │   │   │   ├── Bacillus toyonensis
+│   │   │   │   │   └── Bacillus velezensis
+│   │   │   │   ├── Geobacillus
+│   │   │   │   └── Priestia
+│   │   │   │       ├── Priestia aryabhattai
+│   │   │   │       └── Priestia megaterium
+│   │   │   ├── Listeriaceae
+│   │   │   │   └── Listeria
+│   │   │   │       ├── Listeria innocua
+│   │   │   │       └── Listeria monocytogenes
+│   │   │   ├── Paenibacillaceae
+│   │   │   │   └── Paenibacillus
+│   │   │   ├── Planococcaceae
+│   │   │   │   └── Planococcus
+│   │   │   └── Staphylococcaceae
+│   │   │       ├── Macrococcus
+│   │   │       │   └── Macrococcus caseolyticus
+│   │   │       ├── Mammaliicoccus
+│   │   │       │   └── Mammaliicoccus sciuri
+│   │   │       └── Staphylococcus
+│   │   │           ├── Staphylococcus aureus
+│   │   │           ├── Staphylococcus capitis
+│   │   │           ├── Staphylococcus epidermidis
+│   │   │           ├── Staphylococcus equorum
+│   │   │           ├── Staphylococcus haemolyticus
+│   │   │           ├── Staphylococcus hominis
+│   │   │           ├── Staphylococcus lugdunensis
+│   │   │           ├── Staphylococcus saprophyticus
+│   │   │           ├── Staphylococcus simulans
+│   │   │           └── Staphylococcus warneri
+│   │   └── Lactobacillales
+│   │       ├── Carnobacteriaceae
+│   │       │   └── Carnobacterium
+│   │       ├── Enterococcaceae
+│   │       │   ├── Enterococcus
+│   │       │   │   ├── Enterococcus casseliflavus
+│   │       │   │   ├── Enterococcus faecalis
+│   │       │   │   ├── Enterococcus faecium
+│   │       │   │   └── Enterococcus hirae
+│   │       │   └── Vagococcus
+│   │       ├── Lactobacillaceae
+│   │       │   ├── Companilactobacillus
+│   │       │   ├── Lacticaseibacillus
+│   │       │   │   ├── Lacticaseibacillus paracasei
+│   │       │   │   └── Lacticaseibacillus rhamnosus
+│   │       │   ├── Lactiplantibacillus
+│   │       │   │   ├── Lactiplantibacillus pentosus
+│   │       │   │   └── Lactiplantibacillus plantarum
+│   │       │   ├── Lactobacillus
+│   │       │   ├── Latilactobacillus
+│   │       │   │   ├── Latilactobacillus curvatus
+│   │       │   │   └── Latilactobacillus sakei
+│   │       │   ├── Lentilactobacillus
+│   │       │   ├── Leuconostoc
+│   │       │   │   ├── Leuconostoc citreum
+│   │       │   │   └── Leuconostoc mesenteroides
+│   │       │   ├── Levilactobacillus
+│   │       │   │   └── Levilactobacillus brevis
+│   │       │   ├── Ligilactobacillus
+│   │       │   │   └── Ligilactobacillus salivarius
+│   │       │   ├── Limosilactobacillus
+│   │       │   │   ├── Limosilactobacillus fermentum
+│   │       │   │   └── Limosilactobacillus reuteri
+│   │       │   ├── Loigolactobacillus
+│   │       │   │   └── Loigolactobacillus backii
+│   │       │   ├── Pediococcus
+│   │       │   │   ├── Pediococcus damnosus
+│   │       │   │   └── Pediococcus pentosaceus
+│   │       │   ├── Secundilactobacillus
+│   │       │   └── Weissella
+│   │       │       └── Weissella cibaria
+│   │       └── Streptococcaceae
+│   │           ├── Lactococcus
+│   │           │   ├── Lactococcus cremoris
+│   │           │   ├── Lactococcus garvieae
+│   │           │   └── Lactococcus lactis
+│   │           └── Streptococcus
+│   │               ├── Streptococcus suis
+│   │               └── Streptococcus thermophilus
+│   └── Clostridia
+│       └── Eubacteriales
+│           ├── Clostridiaceae
+│           │   └── Clostridium
+│           │       ├── Clostridium botulinum
+│           │       ├── Clostridium estertheticum
+│           │       └── Clostridium perfringens
+│           └── Peptostreptococcaceae
+│               └── Clostridioides
+│                   └── Clostridioides difficile
+├── Bacteroidota
+│   ├── Bacteroidia
+│   │   └── Bacteroidales
+│   │       ├── Bacteroidaceae
+│   │       │   ├── Bacteroides
+│   │       │   │   ├── Bacteroides fragilis
+│   │       │   │   └── Bacteroides thetaiotaomicron
+│   │       │   └── Phocaeicola
+│   │       └── Tannerellaceae
+│   │           └── Parabacteroides
+│   │               └── Parabacteroides distasonis
+│   ├── Cytophagia
+│   │   └── Cytophagales
+│   │       ├── Flammeovirgaceae
+│   │       │   └── Chondrinema
+│   │       │       └── Chondrinema litorale
+│   │       ├── Hymenobacteraceae
+│   │       │   └── Hymenobacter
+│   │       └── Spirosomaceae
+│   └── Flavobacteriia
+│       └── Flavobacteriales
+│           ├── Flavobacteriaceae
+│           │   └── Flavobacterium
+│           └── Weeksellaceae
+├── Campylobacterota
+│   └── Epsilonproteobacteria
+│       └── Campylobacterales
+│           ├── Arcobacteraceae
+│           ├── Campylobacteraceae
+│           │   └── Campylobacter
+│           │       ├── Campylobacter coli
+│           │       ├── Campylobacter fetus
+│           │       └── Campylobacter jejuni
+│           └── Helicobacteraceae
+│               └── Helicobacter
+│                   └── Helicobacter pylori
+├── Chlamydiota
+│   └── Chlamydiia
+│       └── Chlamydiales
+│           └── Chlamydiaceae
+│               └── Chlamydia
+├── Cyanobacteriota
+│   └── Cyanophyceae
+│       ├── Chroococcales
+│       │   ├── Aphanothecaceae
+│       │   └── Chroococcaceae
+│       ├── Nostocales
+│       │   ├── Calotrichaceae
+│       │   │   └── Calothrix
+│       │   ├── Nostocaceae
+│       │   │   └── Nostoc
+│       │   └── Tolypothrichaceae
+│       │       └── Tolypothrix
+│       ├── Oscillatoriales
+│       │   └── Microcoleaceae
+│       │       └── Planktothrix
+│       ├── Pseudanabaenales
+│       └── Synechococcales
+│           ├── Acaryochloridaceae
+│           │   └── Acaryochloris
+│           ├── Merismopediaceae
+│           │   └── Synechocystis
+│           └── Synechococcaceae
+│               └── Synechococcus
+├── Deinococcota
+│   └── Deinococci
+│       ├── Deinococcales
+│       │   └── Deinococcaceae
+│       │       └── Deinococcus
+│       └── Thermales
+│           └── Thermaceae
+│               └── Thermus
+│                   └── Thermus thermophilus
+├── Fusobacteriota
+│   └── Fusobacteriia
+│       └── Fusobacteriales
+│           ├── Fusobacteriaceae
+│           │   └── Fusobacterium
+│           └── Leptotrichiaceae
+├── Mycoplasmatota
+│   └── Mollicutes
+│       ├── Acholeplasmatales
+│       │   └── Acholeplasmataceae
+│       │       └── Candidatus Phytoplasma
+│       ├── Entomoplasmatales
+│       │   └── Spiroplasmataceae
+│       │       └── Spiroplasma
+│       │           └── Spiroplasma citri
+│       └── Mycoplasmatales
+│           └── Mycoplasmataceae
+│               └── Mycoplasmopsis
+├── Planctomycetota
+├── Pseudomonadota
+│   ├── Acidithiobacillia
+│   │   └── Acidithiobacillales
+│   │       └── Acidithiobacillaceae
+│   │           └── Acidithiobacillus
+│   ├── Alphaproteobacteria
+│   │   ├── Hyphomicrobiales
+│   │   │   ├── Aurantimonadaceae
+│   │   │   ├── Bartonellaceae
+│   │   │   │   └── Bartonella
+│   │   │   ├── Brucellaceae
+│   │   │   │   └── Brucella
+│   │   │   ├── Methylobacteriaceae
+│   │   │   │   └── Methylobacterium
+│   │   │   ├── Methylocystaceae
+│   │   │   │   └── Methylocystis
+│   │   │   ├── Nitrobacteraceae
+│   │   │   │   └── Bradyrhizobium
+│   │   │   ├── Phyllobacteriaceae
+│   │   │   │   ├── Aminobacter
+│   │   │   │   └── Mesorhizobium
+│   │   │   ├── Rhizobiaceae
+│   │   │   │   ├── Agrobacterium
+│   │   │   │   │   ├── Agrobacterium fabacearum
+│   │   │   │   │   ├── Agrobacterium fabrum
+│   │   │   │   │   ├── Agrobacterium rhizogenes
+│   │   │   │   │   └── Agrobacterium tumefaciens
+│   │   │   │   ├── Rhizobium
+│   │   │   │   │   └── Rhizobium leguminosarum
+│   │   │   │   ├── Shinella
+│   │   │   │   └── Sinorhizobium
+│   │   │   │       └── Sinorhizobium meliloti
+│   │   │   └── Stappiaceae
+│   │   │       └── Roseibium
+│   │   ├── Rhodobacterales
+│   │   │   ├── Paracoccaceae
+│   │   │   │   ├── Cereibacter
+│   │   │   │   │   └── Cereibacter sphaeroides
+│   │   │   │   └── Paracoccus
+│   │   │   │       ├── Paracoccus marcusii
+│   │   │   │       └── Paracoccus yeei
+│   │   │   └── Roseobacteraceae
+│   │   │       ├── Leisingera
+│   │   │       │   ├── Leisingera aquaemixtae
+│   │   │       │   └── Leisingera caerulea
+│   │   │       ├── Phaeobacter
+│   │   │       │   ├── Phaeobacter gallaeciensis
+│   │   │       │   ├── Phaeobacter inhibens
+│   │   │       │   └── Phaeobacter piscinae
+│   │   │       ├── Pseudosulfitobacter
+│   │   │       │   └── Pseudosulfitobacter pseudonitzschiae
+│   │   │       ├── Roseivivax
+│   │   │       ├── Roseovarius
+│   │   │       ├── Salipiger
+│   │   │       └── Sulfitobacter
+│   │   ├── Rhodospirillales
+│   │   │   ├── Acetobacteraceae
+│   │   │   │   ├── Acetobacter
+│   │   │   │   │   └── Acetobacter pasteurianus
+│   │   │   │   ├── Acidiphilium
+│   │   │   │   ├── Komagataeibacter
+│   │   │   │   └── Roseomonas
+│   │   │   │       └── Roseomonas mucosa
+│   │   │   └── Azospirillaceae
+│   │   │       └── Azospirillum
+│   │   ├── Rickettsiales
+│   │   │   └── Rickettsiaceae
+│   │   │       └── Rickettsia
+│   │   └── Sphingomonadales
+│   │       ├── Sphingomonadaceae
+│   │       │   ├── Novosphingobium
+│   │       │   ├── Sphingobium
+│   │       │   │   └── Sphingobium yanoikuyae
+│   │       │   ├── Sphingomonas
+│   │       │   └── Sphingopyxis
+│   │       └── Zymomonadaceae
+│   │           └── Zymomonas
+│   │               └── Zymomonas mobilis
+│   ├── Betaproteobacteria
+│   │   ├── Burkholderiales
+│   │   │   ├── Alcaligenaceae
+│   │   │   ├── Burkholderiaceae
+│   │   │   │   ├── Burkholderia
+│   │   │   │   │   ├── Burkholderia contaminans
+│   │   │   │   │   ├── Burkholderia gladioli
+│   │   │   │   │   └── Burkholderia glumae
+│   │   │   │   ├── Cupriavidus
+│   │   │   │   ├── Paraburkholderia
+│   │   │   │   └── Ralstonia
+│   │   │   └── Comamonadaceae
+│   │   │       ├── Comamonas
+│   │   │       └── Polaromonas
+│   │   ├── Neisseriales
+│   │   │   └── Neisseriaceae
+│   │   │       └── Neisseria
+│   │   │           └── Neisseria gonorrhoeae
+│   │   └── Nitrosomonadales
+│   └── Gammaproteobacteria
+│       ├── Aeromonadales
+│       │   └── Aeromonadaceae
+│       │       └── Aeromonas
+│       │           ├── Aeromonas caviae
+│       │           ├── Aeromonas dhakensis
+│       │           ├── Aeromonas hydrophila
+│       │           ├── Aeromonas salmonicida
+│       │           └── Aeromonas veronii
+│       ├── Alteromonadales
+│       │   ├── Pseudoalteromonadaceae
+│       │   │   └── Pseudoalteromonas
+│       │   └── Shewanellaceae
+│       │       └── Shewanella
+│       │           └── Shewanella baltica
+│       ├── Enterobacterales
+│       │   ├── Enterobacteriaceae
+│       │   │   ├── Citrobacter
+│       │   │   │   ├── Citrobacter braakii
+│       │   │   │   ├── Citrobacter freundii
+│       │   │   │   └── Citrobacter portucalensis
+│       │   │   ├── Cronobacter
+│       │   │   │   └── Cronobacter sakazakii
+│       │   │   ├── Enterobacter
+│       │   │   │   ├── Enterobacter asburiae
+│       │   │   │   ├── Enterobacter cloacae
+│       │   │   │   ├── Enterobacter cloacae complex sp.
+│       │   │   │   ├── Enterobacter hormaechei
+│       │   │   │   ├── Enterobacter kobei
+│       │   │   │   └── Enterobacter roggenkampii
+│       │   │   ├── Escherichia
+│       │   │   │   ├── Escherichia albertii
+│       │   │   │   ├── Escherichia coli
+│       │   │   │   ├── Escherichia fergusonii
+│       │   │   │   └── Escherichia marmotae
+│       │   │   ├── Klebsiella
+│       │   │   │   ├── Klebsiella aerogenes
+│       │   │   │   ├── Klebsiella grimontii
+│       │   │   │   ├── Klebsiella michiganensis
+│       │   │   │   ├── Klebsiella oxytoca
+│       │   │   │   ├── Klebsiella pneumoniae
+│       │   │   │   ├── Klebsiella quasipneumoniae
+│       │   │   │   └── Klebsiella variicola
+│       │   │   ├── Leclercia
+│       │   │   │   └── Leclercia adecarboxylata
+│       │   │   ├── Raoultella
+│       │   │   │   ├── Raoultella ornithinolytica
+│       │   │   │   └── Raoultella planticola
+│       │   │   ├── Salmonella
+│       │   │   │   ├── Salmonella enterica
+│       │   │   │   └── Salmonella sp.
+│       │   │   └── Shigella
+│       │   │       ├── Shigella boydii
+│       │   │       ├── Shigella dysenteriae
+│       │   │       ├── Shigella flexneri
+│       │   │       └── Shigella sonnei
+│       │   ├── Erwiniaceae
+│       │   │   ├── Buchnera
+│       │   │   │   └── Buchnera aphidicola
+│       │   │   ├── Erwinia
+│       │   │   │   └── Erwinia amylovora
+│       │   │   └── Pantoea
+│       │   │       ├── Pantoea agglomerans
+│       │   │       └── Pantoea ananatis
+│       │   ├── Hafniaceae
+│       │   │   └── Edwardsiella
+│       │   │       ├── Edwardsiella ictaluri
+│       │   │       ├── Edwardsiella piscicida
+│       │   │       └── Edwardsiella tarda
+│       │   ├── Morganellaceae
+│       │   │   ├── Arsenophonus
+│       │   │   │   └── Arsenophonus nasoniae
+│       │   │   ├── Moellerella
+│       │   │   │   └── Moellerella wisconsensis
+│       │   │   ├── Morganella
+│       │   │   │   └── Morganella morganii
+│       │   │   ├── Proteus
+│       │   │   │   └── Proteus mirabilis
+│       │   │   └── Providencia
+│       │   │       ├── Providencia alcalifaciens
+│       │   │       ├── Providencia rettgeri
+│       │   │       └── Providencia stuartii
+│       │   ├── Pectobacteriaceae
+│       │   └── Yersiniaceae
+│       │       ├── Rahnella
+│       │       ├── Serratia
+│       │       │   ├── Serratia entomophila
+│       │       │   ├── Serratia marcescens
+│       │       │   └── Serratia proteamaculans
+│       │       └── Yersinia
+│       │           ├── Yersinia enterocolitica
+│       │           ├── Yersinia pestis
+│       │           ├── Yersinia pseudotuberculosis
+│       │           └── Yersinia ruckeri
+│       ├── Legionellales
+│       │   ├── Coxiellaceae
+│       │   └── Legionellaceae
+│       │       └── Legionella
+│       │           ├── Legionella adelaidensis
+│       │           └── Legionella pneumophila
+│       ├── Methylococcales
+│       ├── Moraxellales
+│       │   └── Moraxellaceae
+│       │       ├── Acinetobacter
+│       │       │   ├── Acinetobacter baumannii
+│       │       │   ├── Acinetobacter haemolyticus
+│       │       │   ├── Acinetobacter indicus
+│       │       │   ├── Acinetobacter johnsonii
+│       │       │   ├── Acinetobacter lwoffii
+│       │       │   ├── Acinetobacter pittii
+│       │       │   ├── Acinetobacter schindleri
+│       │       │   ├── Acinetobacter seifertii
+│       │       │   ├── Acinetobacter ursingii
+│       │       │   ├── Acinetobacter variabilis
+│       │       │   └── Acinetobacter wuhouensis
+│       │       ├── Moraxella
+│       │       │   ├── Moraxella bovis
+│       │       │   └── Moraxella osloensis
+│       │       └── Psychrobacter
+│       │           └── Psychrobacter sp.
+│       ├── Oceanospirillales
+│       ├── Pasteurellales
+│       │   └── Pasteurellaceae
+│       │       ├── Actinobacillus
+│       │       │   └── Actinobacillus pleuropneumoniae
+│       │       ├── Glaesserella
+│       │       │   └── Glaesserella parasuis
+│       │       ├── Haemophilus
+│       │       └── Pasteurella
+│       │           └── Pasteurella multocida
+│       ├── Pseudomonadales
+│       │   └── Pseudomonadaceae
+│       │       └── Pseudomonas
+│       │           ├── Pseudomonas aeruginosa
+│       │           ├── Pseudomonas amygdali
+│       │           ├── Pseudomonas putida
+│       │           ├── Pseudomonas syringae
+│       │           └── Pseudomonas syringae group genomosp. 3
+│       ├── Thiotrichales
+│       │   ├── Francisellaceae
+│       │   │   └── Francisella
+│       │   └── Piscirickettsiaceae
+│       │       └── Piscirickettsia
+│       │           └── Piscirickettsia salmonis
+│       ├── Vibrionales
+│       │   └── Vibrionaceae
+│       │       ├── Photobacterium
+│       │       │   └── Photobacterium damselae
+│       │       └── Vibrio
+│       │           ├── Vibrio alginolyticus
+│       │           ├── Vibrio campbellii
+│       │           ├── Vibrio cholerae
+│       │           └── Vibrio parahaemolyticus
+│       └── Xanthomonadales
+│           └── Xanthomonadaceae
+│               ├── Xanthomonas
+│               │   ├── Xanthomonas campestris
+│               │   ├── Xanthomonas citri
+│               │   ├── Xanthomonas hortorum
+│               │   ├── Xanthomonas oryzae
+│               │   └── Xanthomonas phaseoli
+│               └── Xylella
+│                   └── Xylella fastidiosa
+├── Rhodothermota
+│   └── Rhodothermia
+│       └── Rhodothermales
+│           └── Salinibacteraceae
+│               └── Salinibacter
+│                   └── Salinibacter ruber
+├── Spirochaetota
+│   └── Spirochaetia
+│       ├── Leptospirales
+│       │   └── Leptospiraceae
+│       │       └── Leptospira
+│       │           ├── Leptospira interrogans
+│       │           └── Leptospira noguchii
+│       └── Spirochaetales
+│           └── Borreliaceae
+│               ├── Borrelia
+│               │   ├── Borrelia coriaceae
+│               │   ├── Borrelia crocidurae
+│               │   ├── Borrelia hermsii
+│               │   ├── Borrelia miyamotoi
+│               │   ├── Borrelia puertoricensis
+│               │   └── Borrelia turicatae
+│               └── Borreliella
+│                   ├── Borreliella bavariensis
+│                   ├── Borreliella burgdorferi
+│                   ├── Borreliella garinii
+│                   └── Borreliella mayonii
+└── Thermodesulfobacteriota
+    └── Desulfovibrionia
+        └── Desulfovibrionales
+            └── Desulfovibrionaceae
+```
 
