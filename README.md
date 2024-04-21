@@ -19,7 +19,7 @@ HOTSPOT is a deep learning tool based on the Transformer model, specifically des
 * [diamond](https://anaconda.org/bioconda/diamond)
 * [Prodigal](https://anaconda.org/bioconda/prodigal)
 * [biopython](https://pypi.org/project/biopython/)
-* [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi)=2.13.0
+* [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi)=2.13.0 (conda install -c bioconda blast=2.13.0)
 * [HMMER](https://anaconda.org/bioconda/hmmer)
 * [treelib](https://pypi.org/project/treelib/)
 
