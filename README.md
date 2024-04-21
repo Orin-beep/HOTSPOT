@@ -157,8 +157,8 @@ Usage of train.py:
 ```
 
 
-## References:
-how to cite this tool:
+## References
+How to cite this tool:
 ```
 Ji, Yongxin, et al. "HOTSPOT: hierarchical host prediction for assembled plasmid contigs with transformer." Bioinformatics 39.5 (2023): btad283. https://academic.oup.com/bioinformatics/article/39/5/btad283/7136643
 ```
