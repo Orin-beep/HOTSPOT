@@ -68,7 +68,7 @@ Before running HOTSPOT, you should run `preprocessing.py` to encode the input pl
 
 ## Simple example
 ```
-python preprocessing.py
+python preprocessing.py --fasta example_plasmids/NZ_CP083659.fasta --database database --model_path models
 python hotspot.py
 ```
 
