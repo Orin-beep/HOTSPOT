@@ -36,6 +36,7 @@ If you want to use GPU to accelerate the program:
 ## Prepare the environment
 After cloning this repository (```git clone https://github.com/Orin-beep/HOTSPOT```), you can use Anaconda to install ```environment.yaml```. This will install all packages you need in GPU mode (make sure you have installed CUDA on your system to use the GPU version; otherwise, HOTSPOT will run in CPU mode). The installing command is: 
 ```
+git clone https://github.com/Orin-beep/HOTSPOT
 cd HOTSPOT/
 conda env create -f environment.yaml -n hotspot
 conda activate hotspot
