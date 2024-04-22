@@ -26,7 +26,7 @@ HOTSPOT is a deep learning tool based on the Transformer model, specifically des
 * [HMMER](https://anaconda.org/bioconda/hmmer)
 * [treelib](https://pypi.org/project/treelib/)
 
-If you want to use the GPU to accelerate the program:
+If you want to use GPU to accelerate the program:
 * CUDA
 * PyTorch-GPU
 * For CPU version PyTorch: ```conda install pytorch torchvision torchaudio cpuonly -c pytorch```
