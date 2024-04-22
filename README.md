@@ -103,11 +103,11 @@ python hotspot.py --accurate_mode True
 ## Train your custom models
 The data used to train our default models are presented in the table below. If you intend to train custom models, it is necessary to generate corresponding files in the same format, utilizing your own plasmid dataset.
 
-| Required file | Remark | Usage |
+| Required file | Remark | Usage (format) |
 | ------------- | ------------- | ------------- |
-| plasmids.fasta | Pseudomonadota  | Gammaproteobacteria  |
-| host_lineages.tsv | Bacillota  | Clostridia  |
-| train_val.txt | Pseudomonadota  | Gammaproteobacteria  |
+| [plasmids.fasta](https://drive.google.com/file/d/1LZXSJZCn94JzdzwrCGT1WcMjVT-HWxGx/view?usp=drive_link) | FASTA file of plasmid DNA sequences for training | The downloaded file is a compressed file. You have to unzip it first: `tar -zxvf plasmids.fasta.tar.gz` |
+| [host_lineages.tsv](https://drive.google.com/file/d/1a1Tkq_3SywmGo5sVwTC7jzuV0SkfBOIw/view?usp=drive_link) | TSV file containing complete host lineage information from phylum to species for each training plasmid | TSV file with seven columns: plasmid_id, phylum, class, order, family, genus, species |
+| [train_val.txt](https://drive.google.com/file/d/15HxvHPkKJx6eXXVNXa88tf-0BJZlBbVp/view?usp=drive_link) | TXT file containing the information of the training/validation sets | The first row should display the list of training plasmids, while the second row should display the list of validation plasmids. Each plasmid in the lists should be separated by a space |
 
 Once you have prepared the files listed in the above table, you can train your custom models by entering into the `train/` folder and sequentially running the `preprocessing_train.py` and `train.py` scripts (in the following case, the three required files are saved in the `HOTSPOT/training_dataset/` folder):
 ```
