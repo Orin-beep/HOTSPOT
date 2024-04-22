@@ -47,7 +47,7 @@ If Anaconda fails to work, you can prepare the environment by individually insta
 To download the default database and models, you can use the following bash scripts: 
 ```
 sh prepare_db.sh        # download and unzip the database folder, 91.8 MB
-sh prepare_mdl.sh       # download and unzip models, 13.14 GB
+sh prepare_mdl.sh       # download and unzip the model folder, 1.78 GB
 ```
 
 
