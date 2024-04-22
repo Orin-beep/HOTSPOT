@@ -26,7 +26,7 @@ parser.add_argument('--train_val_list', help='TXT file containing the informatio
 parser.add_argument('--train_ratio', help='the ratio of the training set size to the total number of input training plasmids. If the train_val_list file is not provided, the training plasmids will be randomly split into train/validation sets using the specified ratio, default: 0.8', type=float, default=0.8)
 parser.add_argument('--labels', help="TXT file containing the specified taxonomic labels for different levels. The file should comprise six rows, where each row corresponds to the labels for the phylum, class, order, family, genus, and species levels, respectively. Within each row, the labels should be separated by tabs ('\t'), default: None", type=str, default=None)
 parser.add_argument('--num_plasmids', help='minimun number of training plasmids associated with a taxonomic label (used when the labels file is not provided), default: 20', type=int, default=20)
-parser.add_argument('--add_frags', help='whether to augment the training set by randomly cutting fragments ranging from 1.5 to 15 kbp (this may slightly slow down the training process, but it will significantly enhance the performance of host prediction), default: False', type=str, default='False')
+parser.add_argument('--add_frags', help='whether to augment the training set by randomly cutting fragments ranging from 1.5 to 15 kbp (this may slightly slow down the training process, but it will significantly enhance the performance of host prediction), default: True', type=str, default='True')
 parser.add_argument('--num_frags', help='maximum number of added fragments from each training plasmid, default: 5', type=int, default=5)
 parser.add_argument('--threads', help='number of threads utilized for preprocessing, default: 2', type=str, default='2')
 inputs = parser.parse_args()
@@ -48,7 +48,7 @@ def help_info():
         [--train_ratio TRAIN_RATIO] the ratio of the training set size to the total number of input training plasmids. If the train_val_list file is not provided, the training plasmids will be randomly split into train/validation sets using the specified ratio, default: 0.8
         [--labels LABELS]  TXT file containing the specified taxonomic labels for different levels. The file should comprise six rows, where each row corresponds to the labels for the phylum, class, order, family, genus, and species levels, respectively. Within each row, the labels should be separated by tabs ('\t'), default: None
         [--num_plasmids NUM_PLASMIDS]    minimun number of training plasmids associated with a taxonomic label (used when the labels file is not provided), default: 20
-        [--add_frags ADD_FRAGS]   whether to augment the training set by randomly cutting fragments ranging from 1.5 to 15 kbp (this may slightly slow down the training process, but it will significantly enhance the performance of host prediction), default: False
+        [--add_frags ADD_FRAGS]   whether to augment the training set by randomly cutting fragments ranging from 1.5 to 15 kbp (this may slightly slow down the training process, but it will significantly enhance the performance of host prediction), default: True
         [--num_frags NUM_FRAGS]   maximum number of added fragments from each training plasmid, default: 5
         [--threads THREADS] number of threads utilized for preprocessing, default: 2
     """)
