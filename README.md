@@ -6,6 +6,8 @@ HOTSPOT is a deep learning tool based on the Transformer model, specifically des
 ### E-mail: yongxinji2-c@my.cityu.edu.hk
 
 
+### Version: V1.1 (update at 2024-04-21)
+
 #### *__[Update - 2024 - 04 - 21]__* :  <BR/>
 * *We substantially reduce HOTSPOT's model size by training six models, with each model corresponding to one of the six taxonomic levels. <BR/>*
 
