@@ -51,18 +51,18 @@ sh prepare_mdl.sh       # download and unzip the model folder, 1.78 GB
 ```
 
 
-## Download the database and pre-trained models manually
-If the bash scripts do not work, you can manually download the database and models using the following links:
-* [database.tgz](https://drive.google.com/file/d/1VIbfp35X5JMiA7BfOS3lNBycT73uFcTN/view)
-* [models.tgz](https://drive.google.com/file/d/1L6ogZhdAWJ7Ns8Hz59m7W2kFPMcMTC6u/view)
+## Alternative way: download default database and models manually
+If the above bash scripts do not work, you can manually download the default database and models using the following Google Drive links:
+* [database.tar.gz](https://drive.google.com/file/d/1ZSTz3kotwF8Zugz_aBGDtmly8BVo9G4T/view)
+* [models.tar.gz](https://drive.google.com/file/d/1bnA1osvYDgYBi-DRFkP-HrvcnvBvbipF/view)
 
-After downloading the `database.tgz` and `models.tgz` to HOTSPOT's main directory, you have to unzip them:
+After downloading the `database.tar.gz` and `models.tar.gz` to HOTSPOT's main directory, you have to unzip them:
 ```
-tar -zxvf database.tgz
-rm database.tgz
+tar -zxvf database.tar.gz
+rm database.tar.gz
 
-tar -zxvf models.tgz
-rm models.tgz
+tar -zxvf models.tar.gz
+rm models.tar.gz
 ```
 
 
