@@ -101,8 +101,20 @@ python hotspot.py --accurate_mode True
 
 
 ## Train your custom models
+The data used to train our default models are presented in the table below. If you intend to train custom models, it is necessary to generate corresponding files in the same format, utilizing your own plasmid dataset.
 
+| Required file | Remark | Usage |
+| ------------- | ------------- | ------------- |
+| plasmids.fasta | Pseudomonadota  | Gammaproteobacteria  |
+| host_lineages.tsv | Bacillota  | Clostridia  |
+| train_val.txt | Pseudomonadota  | Gammaproteobacteria  |
 
+Once you have prepared the files listed in the above table, you can train your custom models by entering into the `train/` folder and sequentially running the `preprocessing_train.py` and `train.py` scripts (in the following case, the three required files are saved in the `HOTSPOT/training_dataset/` folder):
+```
+cd train/
+python preprocessing_train.py --fasta ../training_dataset/plasmids.fasta --host_info ../training_dataset/host_lineages.tsv --train_val_list ../training_dataset/train_val.txt
+python train.py
+```
 
 ## Full command-line options
 preprocessing.py:
