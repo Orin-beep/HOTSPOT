@@ -77,7 +77,7 @@ python hotspot.py
 
 
 ## Format of the output file
-The results will be saved in a TSV file (default: results/host_lineage.tsv) containing the predicted host lineages from phylum to species level. Each row corresponds to an input plasmid sequence. Examples:
+The results will be saved in a TSV file (default: `results/host_lineage.tsv`) containing the predicted host lineages from phylum to species level. Each row corresponds to an input plasmid sequence. Examples:
 
 | Contig | Phylum | Class | Order | Family | Genus | Species |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
@@ -90,7 +90,7 @@ The dash '-' indicates that HOTSPOT cannot provide accurate predictions for the 
 
 
 ## Accurate mode with Monte Carlo dropout (MC-dropout)
-HOTSPOT provides a specialized *accurate mode* designed to enhance accuracy using MC-dropout based early stop. You can activate this mode using the `--accurate_mode True` option. The results generated in this *accurate mode* will be saved in results/host_lineage_acc.tsv by default.
+HOTSPOT provides a specialized *accurate mode* designed to enhance accuracy using MC-dropout based early stop. You can activate this mode using the `--accurate_mode True` option. The results generated in this *accurate mode* will be saved in `results/host_lineage_acc.tsv` by default.
 
 
 For advanced users, you can utilize the `--mc_num`, `--min_mean`, and `--max_var` options to have control over the specific implementation details of the MC-dropout mechanism. Detailed usage of these options is shown in the following __Full command-line options__ section. Example:
